@@ -1,4 +1,9 @@
 /* @import "tailwindcss"; */
+:root{
+    --css-skeletone-ui:linear-gradient(90deg, rgba(0, 0, 0, 0.06) 25%, rgba(0, 0, 0, 0.15) 37%, rgba(0, 0, 0, 0.06) 63%);
+    --css-skeletone-ui-logo:linear-gradient(90deg, rgba(0, 0, 0, 0.06) 25%, rgba(0, 0, 0, 0.15) 37%, rgba(0, 0, 0, 0.06) 63%);
+    /* --css-skeletone-ui:linear-gradient(90deg, silver 25%, rgba(0, 0, 0, 0.15) 37%, gray 63%); */
+}
 body{
     color: #212529;
     background-color: #f2f2f3;
@@ -60,7 +65,8 @@ button#searchBtn{
     50% { opacity: 0; }
 }
 .nav-bg{
-    --bg-dark-200: linear-gradient(45deg, #1e1e1ed9, #1e1e1ed9);
+    /* --bg-dark-200: linear-gradient(45deg, #1e1e1ed9, #1e1e1ed9); */
+    --bg-dark-200:linear-gradient(45deg, #3a3a3a1f, #99999929);
     background-image: var(--bg-dark-200);
 }
 .avtara {
@@ -72,4 +78,76 @@ button#searchBtn{
     100% {
         width: 100%;
     }
+}
+.header-menu-skeletone,.header-skeletone,.logo-skeletone-v100{
+    position: relative;
+    background-color: rgb(0,0,0,0.06);
+}
+.header-skeletone::before{
+    content:"";
+    position:absolute;
+    box-sizing: border-box;
+    justify-content: space-between;
+    left: 0px;
+    z-index: 2;
+    margin-top: 0px;
+    min-height: 30px;
+    width: 130px;
+    border-radius: 5px;
+    background: var(--css-skeletone-ui);
+    /* background: linear-gradient(90deg,#b3b3b3,#f9f9f9,#b3b3b3); */
+    background-size: 400% 100%;
+    animation-name: css-skeleton-v200;
+    animation-duration: 1.4s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+}
+.logo-skeletone-v100::before{
+    content:"";
+    position:absolute;
+    box-sizing: border-box;
+    justify-content: space-between;
+    left: 0px;
+    z-index: 2;
+    margin-top: 0px;
+    min-height: 30px;
+    width: 120px;
+    border-radius: 5px;
+    /* background: var(--css-skeletone-ui-logo); */
+    background: linear-gradient(90deg, #b3b3b3, #d7d5d5, #b3b3b3);
+    background-size: 400% 100%;
+    animation-name: css-skeleton-v200;
+    animation-duration: 1.4s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+}
+.header-menu-skeletone::before{
+    content:"";
+    position:absolute;
+    box-sizing: border-box;
+    justify-content: space-between;
+    left: 8px;
+    z-index: 2;
+    margin-top: -7px;
+    min-height: 16px;
+    width: 70px;
+    border-radius: 5px;
+    background: var(--css-skeletone-ui);
+    /* background: linear-gradient(90deg,#b3b3b3,#f9f9f9,#b3b3b3); */
+    background-size: 400% 100%;
+    animation-name: css-skeleton-v200;
+    animation-duration: 1.4s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+}
+@keyframes css-skeleton-v200{
+  0% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
+}
+.display_none{
+    display: none;
 }
