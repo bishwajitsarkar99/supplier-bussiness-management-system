@@ -132,48 +132,117 @@
         </nav>
     </header>
     <!-- =========== Slider-part ============== -->
-    <section class="px-5 py-10">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <!-- Left Carousel -->
-            <div id="default-carousel" class="relative w-full" data-carousel="slide">
-            <!-- Carousel wrapper -->
-            <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
-                <div class="duration-700 ease-in-out" data-carousel-item="active">
-                <img src="./images/slider-images/slider-img-01.jpg"
-                    class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="Slide 1">
+    <section class="px-10 py-10">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+            <!-- ===== Left Large Carousel ===== -->
+            <div class="md:col-span-8">
+                <div id="left-carousel" class="relative w-full h-full" data-carousel="slide">
+                    <div class="relative h-64 md:h-[26rem] overflow-hidden rounded-lg">
+                        <div class="duration-700 ease-in-out" data-carousel-item="active">
+                            <img src="./images/left-slider-images/slider-img-01.png"
+                            class="absolute block w-full h-full object-cover top-0 left-0" alt="Slide 1">
+                        </div>
+                        <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                            <img src="./images/left-slider-images/slider-image-02.png"
+                            class="absolute block w-full h-full object-cover top-0 left-0" alt="Slide 2">
+                        </div>
+                        <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                            <img src="./images/left-slider-images/slider-image-03.png"
+                            class="absolute block w-full h-full object-cover top-0 left-0" alt="Slide 3">
+                        </div>
+                        <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                            <img src="./images/left-slider-images/slider-image-04.png"
+                            class="absolute block w-full h-full object-cover top-0 left-0" alt="Slide 3">
+                        </div>
+                        <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                            <img src="./images/left-slider-images/slider-image-05.png"
+                            class="absolute block w-full h-full object-cover top-0 left-0" alt="Slide 3">
+                        </div>
+                        <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                            <img src="./images/left-slider-images/slider-image-06.png"
+                            class="absolute block w-full h-full object-cover top-0 left-0" alt="Slide 3">
+                        </div>
+                    </div>
+                    <!-- Controls -->
+                    <button type="button"
+                        class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer"
+                        data-carousel-next>
+                        <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-black/30">
+                            <svg class="w-4 h-4 text-white" fill="none" viewBox="0 0 6 10">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M5 1 1 5l4 4" />
+                            </svg>
+                        </span>
+                    </button>
+                    <button type="button"
+                        class="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer"
+                        data-carousel-prev>
+                        <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-black/30">
+                            <svg class="w-4 h-4 text-white" fill="none" viewBox="0 0 6 10">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="m1 9 4-4-4-4" />
+                            </svg>
+                        </span>
+                    </button>
                 </div>
-                <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                <img src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-2.jpg"
-                    class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="Slide 2">
+            </div>
+            <!-- ===== Right Side: Two Sliders (Top + Bottom) ===== -->
+            <div class="md:col-span-4 flex flex-col gap-8">
+                <!-- Top Slider -->
+                <div id="right-top-carousel" class="relative w-full" data-carousel="slide">
+                    <div class="relative h-48 overflow-hidden rounded-lg">
+                        <div class="duration-700 ease-in-out" data-carousel-item="active">
+                            <img src="./images/left-slider-images/slider-img-01.png"
+                            class="absolute block w-full h-full object-cover top-0 left-0" alt="Top Slide 1">
+                        </div>
+                        <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                            <img src="./images/left-slider-images/slider-image-02.png"
+                            class="absolute block w-full h-full object-cover top-0 left-0" alt="Top Slide 2">
+                        </div>
+                    </div>
+                    <!-- Controls -->
+                    <button type="button"
+                        class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer"
+                        data-carousel-next>
+                        <span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-black/30">
+                            <svg class="w-4 h-4 text-white" fill="none" viewBox="0 0 6 10">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M5 1 1 5l4 4" />
+                            </svg>
+                        </span>
+                    </button>
+                    <button type="button"
+                        class="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer"
+                        data-carousel-prev>
+                        <span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-black/30">
+                            <svg class="w-4 h-4 text-white" fill="none" viewBox="0 0 6 10">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="m1 9 4-4-4-4" />
+                            </svg>
+                        </span>
+                    </button>
                 </div>
-            </div>
+                <!-- Bottom Slider -->
+                <div id="right-bottom-carousel" class="relative w-full" data-carousel="slide">
+                    <div class="sub__slider h-48">
+                        <div class="sub-scroll-slider-container">
+                            <img src="./images/left-slider-images/slider-img-01.png" alt="Bottom Slide 1">
+                            <img src="./images/left-slider-images/slider-image-02.png" alt="Bottom Slide 2">
+                            <img src="./images/left-slider-images/slider-image-03.png" alt="Bottom Slide 3">
+                            <img src="./images/left-slider-images/slider-image-04.png" alt="Bottom Slide 4">
+                            <img src="./images/left-slider-images/slider-image-05.png" alt="Bottom Slide 5">
+                            <img src="./images/left-slider-images/slider-image-06.png" alt="Bottom Slide 6">
 
-            <!-- Indicators -->
-            <div class="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3">
-                <button type="button" class="w-3 h-3 rounded-full bg-white cursor-pointer" aria-label="Slide 1" data-carousel-slide-to="0"></button>
-                <button type="button" class="w-3 h-3 rounded-full bg-white cursor-pointer" aria-label="Slide 2" data-carousel-slide-to="1"></button>
-            </div>
-
-            <!-- Controls -->
-            <button type="button" class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer" data-carousel-prev>
-                <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-black/30">
-                <svg class="w-4 h-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
-                </svg>
-                </span>
-            </button>
-            <button type="button" class="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer" data-carousel-next>
-                <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-black/30">
-                <svg class="w-4 h-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
-                </svg>
-                </span>
-            </button>
-            </div>
-
-            <!-- Right content -->
-            <div class="flex items-center justify-center text-lg font-semibold text-gray-700">
-                Right part content
+                            <!-- Duplicate images for seamless loop -->
+                            <img src="./images/left-slider-images/slider-img-01.png" alt="Bottom Slide 1">
+                            <img src="./images/left-slider-images/slider-image-02.png" alt="Bottom Slide 2">
+                            <img src="./images/left-slider-images/slider-image-03.png" alt="Bottom Slide 3">
+                            <img src="./images/left-slider-images/slider-image-04.png" alt="Bottom Slide 4">
+                            <img src="./images/left-slider-images/slider-image-05.png" alt="Bottom Slide 5">
+                            <img src="./images/left-slider-images/slider-image-06.png" alt="Bottom Slide 6">
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
