@@ -198,3 +198,20 @@ footer.background {
 button.button-shadow{
     box-shadow: none !important;
 }
+.media_group{
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+    -ms-flex-item-align: center;
+    transform-style: preserve-3d;
+    animation: moving 5s linear infinite;
+}
+@keyframes moving{
+    0%{
+        transform: perspective(1000px) rotateY(0deg);
+    }
+    100%{
+        transform: perspective(1000px) rotateY(360deg);
+    }
+}
