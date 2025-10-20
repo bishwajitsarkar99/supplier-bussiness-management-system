@@ -32,7 +32,11 @@ option{
     font-family: var(--font-family);
     border-top-left-radius: 3px;
     border-bottom-left-radius: 3px;
-    padding: 6px 8px;
+    padding: 11px 8px;
+    border: 2px ridge rgba(0,123,255,0.1);
+}
+#search:focus{
+    border: 2px ridge dodgerblue;
 }
 button#searchBtn{
     font-size: 14px;
@@ -59,15 +63,37 @@ button#searchBtn{
     background: -webkit-gradient(linear, 0% 100%, 0% 0%, from(rgb(12 152 157)), to(rgb(82 197 255)));
     animation: blink 1s step-end infinite;
     pointer-events: none;
-    margin-top: 1px;
+    margin-top: 0px;
 }
 @keyframes blink {
     50% { opacity: 0; }
 }
-.nav-bg{
-    /* --bg-dark-200: linear-gradient(45deg, #1e1e1ed9, #1e1e1ed9); */
+.header-bg{
+   --bg-dark-200: linear-gradient(45deg, #1e1e1ed9, #1e1e1ed9);
     --bg-dark-200:linear-gradient(45deg, #3a3a3a1f, #99999929);
+    --bg-flora-200:linear-gradient(45deg, #ffffedd4, #ffffedf0);
+    background-image: var(--bg-flora-200);
+    transition: all 0.3s ease-in-out; 
+}
+.nav-bg{
+    --bg-dark-200: linear-gradient(45deg, #1e1e1ed9, #1e1e1ed9);
+    --bg-dark-200:linear-gradient(45deg, #3a3a3a1f, #99999929);
+    --bg-flora-200:linear-gradient(45deg, #ffffedd4, #ffffedf0);
+    background-image: var(--bg-flora-200);
+    transition: all 0.3s ease-in-out;
+}
+.nav-bg.scrolled{
+    --bg-dark-200: linear-gradient(45deg, #1e1e1ed9, #1e1e1ed9);
     background-image: var(--bg-dark-200);
+    backdrop-filter: blur(6px);
+}
+.text-scroll.text-scrolled{
+    color: white;
+    transition: all 0.3s ease-in-out;
+}
+.text-scroll.text-scrolled:hover{
+    color: gray;
+    transition: all 0.3s ease-in-out;
 }
 .avtara {
     border-radius: 50%;
