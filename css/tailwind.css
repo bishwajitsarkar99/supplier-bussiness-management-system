@@ -5,6 +5,24 @@
     /* --css-skeletone-ui:linear-gradient(90deg, silver 25%, rgba(0, 0, 0, 0.15) 37%, gray 63%); */
     --menu-card-bg: radial-gradient(farthest-corner at 100px 100px, #fff, #fff);
     --menu-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    --image-transform:translateZ(20);
+    --image-cursor:cell;
+    --image-transition:all 0.6s;
+    --image-50-transform:translateY(50px);
+    --image-100-transform:translateX(0px);
+    --card-name-transform:translateY(100px);
+    --card-name-0-transition:all 0.5s;
+    --card-name-50-letter-spacing:0.5px;
+    --card-name-common-transition:all 0.6s;
+    --card-name-50-transform:translateY(0px);
+    --card-name-100-letter-spacing:1px;
+    --card-name-100-transform:translateX(10px);
+    --card-name-animation:textDesign 2s linear infinite alternate;
+
+    --animation-transform-1245:translateX(-50%) translateY(-50%) translateZ(0) scale(1);
+    --animation-transform-1246:translateX(-50%) translateY(-50%) translateZ(0) scale(1.5);
+    --animation-transform-1256:translateX(-50%) translateY(-50%) translateZ(0) scale(1);
+    --animation-transform-1257:translateX(-50%) translateY(-50%) translateZ(0) scale(1.5);
 }
 body{
     color: #212529;
@@ -14,93 +32,81 @@ body{
     --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     font-family: var(--font-family);
 }
-select{
-    box-shadow: none;
-    outline: none;
-    font-size: 14px;
-    font-weight: 600;
-    font-family: var(--font-family);
-    border-radius: 3px;
-}
-option{
-    font-size: 14px;
-    font-weight: 600;
-}
 #search{
-    outline: none;
-    box-shadow: none;
-    font-size: 14px;
-    font-weight: 600;
-    font-family: var(--font-family);
-    border-top-left-radius: 3px;
-    border-bottom-left-radius: 3px;
-    padding: 11px 8px;
-    border: 2px ridge rgba(0,123,255,0.1);
+  outline: none;
+  box-shadow: none;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: var(--font-family);
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  padding: 11px 8px;
+  border: 2px ridge rgba(0,123,255,0.1);
 }
 #search:focus{
-    border: 2px ridge dodgerblue;
+  border: 2px ridge dodgerblue;
 }
 button#searchBtn{
-    font-size: 14px;
-    font-weight: 700;
-    height: 26px;
-    border-top-right-radius: 3px;
-    border-bottom-right-radius: 3px;
-    line-height: .3;
+  font-size: 14px;
+  font-weight: 700;
+  height: 26px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  line-height: .3;
 }
 /* caret thickness */
 .input-wrapper {
-    position: relative;
-    display: inline-block;
-    /* width: 100%; */
+  position: relative;
+  display: inline-block;
+  /* width: 100%; */
 }
 /* Fake caret */
 .fake-caret {
-    display: none;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 8px;
-    height: 1.3em;
-    background: -webkit-gradient(linear, 0% 100%, 0% 0%, from(rgb(12 152 157)), to(rgb(82 197 255)));
-    animation: blink 1s step-end infinite;
-    pointer-events: none;
-    margin-top: 0px;
+  display: none;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 8px;
+  height: 1.3em;
+  background: -webkit-gradient(linear, 0% 100%, 0% 0%, from(rgb(12 152 157)), to(rgb(82 197 255)));
+  animation: blink 1s step-end infinite;
+  pointer-events: none;
+  margin-top: 0px;
 }
 @keyframes blink {
-    50% { opacity: 0; }
+  50% { opacity: 0; }
 }
 .header-bg{
-   --bg-dark-200: linear-gradient(45deg, #1e1e1ed9, #1e1e1ed9);
-    --bg-dark-200:linear-gradient(45deg, #3a3a3a1f, #99999929);
-    --bg-white-200:linear-gradient(45deg, #fff, #fff);
-    background-image: var(--bg-white-200);
-    transition: all 0.3s ease-in-out; 
+  --bg-dark-200: linear-gradient(45deg, #1e1e1ed9, #1e1e1ed9);
+  --bg-dark-200:linear-gradient(45deg, #3a3a3a1f, #99999929);
+  --bg-white-200:linear-gradient(45deg, #fff, #fff);
+  background-image: var(--bg-white-200);
+  transition: all 0.3s ease-in-out; 
 }
 .nav-bg{
-    --bg-dark-200: linear-gradient(45deg, #1e1e1ed9, #1e1e1ed9);
-    --bg-dark-200:linear-gradient(45deg, #3a3a3a1f, #99999929);
-    --bg-white-200:linear-gradient(45deg, #fff, #fff);
-    background-image: var(--bg-white-200);
-    transition: all 0.3s ease-in-out;
+  --bg-dark-200: linear-gradient(45deg, #1e1e1ed9, #1e1e1ed9);
+  --bg-dark-200:linear-gradient(45deg, #3a3a3a1f, #99999929);
+  --bg-white-200:linear-gradient(45deg, #fff, #fff);
+  background-image: var(--bg-white-200);
+  transition: all 0.3s ease-in-out;
 }
 .nav-bg.scrolled{
-    --bg-dark-200: linear-gradient(45deg, #1e1e1ed9, #1e1e1ed9);
-    background-image: var(--bg-dark-200);
-    backdrop-filter: blur(6px);
+  --bg-dark-200: linear-gradient(45deg, #1e1e1ed9, #1e1e1ed9);
+  background-image: var(--bg-dark-200);
+  backdrop-filter: blur(6px);
 }
 .text-scroll.text-scrolled{
-    color: white;
-    transition: all 0.3s ease-in-out;
+  color: white;
+  transition: all 0.3s ease-in-out;
 }
 .text-scroll.text-scrolled:hover{
-    color: gray;
-    transition: all 0.3s ease-in-out;
+  color: gray;
+  transition: all 0.3s ease-in-out;
 }
 .avtara {
-    border-radius: 50%;
-    box-shadow: 0 2px 20px #0001, 0 1px 6px #0001;
-    animation: zoom-out 3s linear infinite;
+  border-radius: 50%;
+  box-shadow: 0 2px 20px #0001, 0 1px 6px #0001;
+  animation: zoom-out 3s linear infinite;
 }
 @keyframes zoom-out {
     100% {
@@ -109,27 +115,26 @@ button#searchBtn{
 }
 .header-menu-skeletone,.header-skeletone,.logo-skeletone-v100,.top-header-menu-skeletone-v100
 ,.top-header-menu-skeletone-v200,.top-header-menu-skeletone-v300,.top-header-menu-skeletone-v400,.top-header-menu-skeletone-v500{
-    position: relative;
-    background-color: rgb(0,0,0,0.06);
+  position: relative;
+  background-color: rgb(0,0,0,0.06);
 }
 .header-skeletone::before{
-    content:"";
-    position:absolute;
-    box-sizing: border-box;
-    justify-content: space-between;
-    left: 10px;
-    z-index: 2;
-    margin-top: 0px;
-    min-height: 30px;
-    width: 130px;
-    border-radius: 5px;
-    background: var(--css-skeletone-ui);
-    /* background: linear-gradient(90deg,#b3b3b3,#f9f9f9,#b3b3b3); */
-    background-size: 400% 100%;
-    animation-name: css-skeleton-v200;
-    animation-duration: 1.4s;
-    animation-timing-function: ease;
-    animation-iteration-count: infinite;
+  content:"";
+  position:absolute;
+  box-sizing: border-box;
+  justify-content: space-between;
+  left: 10px;
+  z-index: 2;
+  margin-top: 0px;
+  min-height: 30px;
+  width: 130px;
+  border-radius: 5px;
+  background: var(--css-skeletone-ui);
+  background-size: 400% 100%;
+  animation-name: css-skeleton-v200;
+  animation-duration: 1.4s;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
 }
 .logo-skeletone-v100::before{
     content:"";
@@ -142,7 +147,6 @@ button#searchBtn{
     min-height: 30px;
     width: 120px;
     border-radius: 5px;
-    /* background: var(--css-skeletone-ui-logo); */
     background: linear-gradient(90deg, #b3b3b3, #d7d5d5, #b3b3b3);
     background-size: 400% 100%;
     animation-name: css-skeleton-v200;
@@ -162,7 +166,6 @@ button#searchBtn{
     width: 70px;
     border-radius: 5px;
     background: var(--css-skeletone-ui);
-    /* background: linear-gradient(90deg,#b3b3b3,#f9f9f9,#b3b3b3); */
     background-size: 400% 100%;
     animation-name: css-skeleton-v200;
     animation-duration: 1.4s;
@@ -181,7 +184,6 @@ button#searchBtn{
     width: 70px;
     border-radius: 5px;
     background: var(--css-skeletone-ui);
-    /* background: linear-gradient(90deg,#b3b3b3,#f9f9f9,#b3b3b3); */
     background-size: 400% 100%;
     animation-name: css-skeleton-v200;
     animation-duration: 1.4s;
@@ -200,7 +202,6 @@ button#searchBtn{
     width: 70px;
     border-radius: 5px;
     background: var(--css-skeletone-ui);
-    /* background: linear-gradient(90deg,#b3b3b3,#f9f9f9,#b3b3b3); */
     background-size: 400% 100%;
     animation-name: css-skeleton-v200;
     animation-duration: 1.4s;
@@ -219,7 +220,6 @@ button#searchBtn{
     width: 70px;
     border-radius: 5px;
     background: var(--css-skeletone-ui);
-    /* background: linear-gradient(90deg,#b3b3b3,#f9f9f9,#b3b3b3); */
     background-size: 400% 100%;
     animation-name: css-skeleton-v200;
     animation-duration: 1.4s;
@@ -238,7 +238,6 @@ button#searchBtn{
     width: 70px;
     border-radius: 5px;
     background: var(--css-skeletone-ui);
-    /* background: linear-gradient(90deg,#b3b3b3,#f9f9f9,#b3b3b3); */
     background-size: 400% 100%;
     animation-name: css-skeleton-v200;
     animation-duration: 1.4s;
@@ -257,7 +256,6 @@ button#searchBtn{
     width: 70px;
     border-radius: 5px;
     background: var(--css-skeletone-ui);
-    /* background: linear-gradient(90deg,#b3b3b3,#f9f9f9,#b3b3b3); */
     background-size: 400% 100%;
     animation-name: css-skeleton-v200;
     animation-duration: 1.4s;
@@ -417,4 +415,59 @@ button.button-shadow{
   border-left: 0.5em solid transparent;
   border-right: 0.5em solid transparent;
   border-bottom: 0.5em solid rgba(0,123,255,0.6);
+}
+.menu-acc-card-arrow{
+  position: absolute;
+  top: -5px;
+  left: 30px;
+  width: 1rem;
+  height: 1rem;
+  pointer-events: none;
+}
+.menu-acc-card-arrow::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  border-left: 0.5em solid transparent;
+  border-right: 0.5em solid transparent;
+  border-bottom: 0.5em solid rgba(0,123,255,0.6);
+}
+.card-focus {
+  animation: pulse 1s;
+}
+@keyframes pulse{
+  0% {
+    transform: scale(0.1);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+.card-name-display-block{
+    display: block;
+    font-size: 14px;
+    margin-left: 21px;
+    margin-top: -8px;
+    font-family: var(--font-family-features);
+    animation: var(--card-name-animation);
+    transform: var(--card-name-transform);
+}
+@keyframes textDesign{
+    0%{
+        color: lightblue;
+        transition: var(--card-name-0-transition);
+    }
+    50%{
+        letter-spacing: var(--card-name-50-letter-spacing);
+        transition: var(--card-name-common-transition);
+        transform: var(--card-name-50-transform);
+    }
+    100%{
+        letter-spacing: var(--card-name-100-letter-spacing);
+        transition: var(--card-name-common-transition);
+        transform: var(--card-name-100-transform);
+    }
 }

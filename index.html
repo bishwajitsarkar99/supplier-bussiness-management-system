@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth md:scroll-auto">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,9 +9,10 @@
     <title>Supplier Management</title>
     <link rel="icon" type="image/png" href="./images/com-black-favicon.png">
     <link rel="manifest" href="./manifest.json">
-    <link href="./css/tailwind.css" rel="stylesheet">
+    <link href="./css/tailwind.min.css" rel="stylesheet">
     <link href="./css/select2.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <header class=" grid-flow-row items-center gap-2 header-bg px-4 py-3 text-white">
@@ -37,8 +38,8 @@
                     </span>
                     <div class="dropdown-content dropdown-menu-component menu-card">
                         <ul class="menu-btn-group">
-                            <li class="child-line-row text-gray-700">Bangla</li>
-                            <li class="child-line-row text-gray-700">English</li>
+                            <li class="child-line-row text-gray-700 text-sm">Bangla</li>
+                            <li class="child-line-row text-gray-700 text-sm">English</li>
                         </ul>
                         <span class="menu-card-arrow"></span>
                     </div>
@@ -83,10 +84,10 @@
                     </a>
                     <div class="dropdown-content dropdown-menu-component menu-card">
                         <ul class="menu-btn-group">
-                            <li class="child-line-row text-gray-700">Bangla</li>
-                            <li class="child-line-row text-gray-700">English</li>
+                            <li class="child-line-row text-gray-700 text-sm">Create</li>
+                            <li class="child-line-row text-gray-700 text-sm">Forget Password</li>
                         </ul>
-                        <span class="menu-card-arrow"></span>
+                        <span class="menu-acc-card-arrow"></span>
                     </div>
                 </div>
             </div>
@@ -94,14 +95,14 @@
     </header>
     <nav class="sticky top-0 z-50 nav-bg px-4 py-3 grid-flow-row grid grid-cols-2 items-center gap-0 text-shadow-sm border-b-0 border-gray-50">
         <div class="flex items-center gap-1 w-140">
-            <select class="bg-white text-left text-slate-900 font-light caret-white cursor-pointer h-6 ps-2 select2" name="product_categories" id="allCategories">
+            <select class="bg-white text-left text-slate-900 font-light cursor-pointer h-6 ps-2 select2" name="product_categories" id="allCategories">
                 <option value="" >All Categories</option>
                 <option value="" >Product Category1</option>
                 <option value="" >Product Category2</option>
             </select>
             <div class="input-wrapper">
                 <span class="fake-caret"></span>
-                <input class="border-collapse border-spacing-0 border-t-0 border-t-slate-500 text-left text-zinc-950 bg-white caret-black w-100 h-6 ps-2 input_cursor" 
+                <input class="caret-blue-500 border-collapse border-spacing-0 border-t-0 border-t-slate-500 text-left text-zinc-950 bg-white w-100 h-6 ps-2 input_cursor" 
                 type="text" name="" id="search" placeholder="I'm shoping for..." autocomplete="off">
                 <button class="absolute bg-indigo-500 shadow-lg shadow-indigo-400/50 transition-none text-center text-white w-20 font-bold border-r-emerald-300 border-t-white hover:bg-indigo-400 hover:text-indigo-100 hover:shadow-indigo-400/50 cursor-pointer" type="button" id="searchBtn">Search</button>
             </div>
@@ -157,27 +158,27 @@
                 <div class="md:col-span-8">
                     <div id="left-carousel" class="relative w-full h-full" data-carousel="slide">
                         <div class="relative h-64 md:h-[26rem] overflow-hidden rounded-lg">
-                            <div class="duration-700 ease-in-out" data-carousel-item="active">
+                            <div class="duration-700 ease-in-out transform-3d" data-carousel-item="active">
                                 <img src="./images/left-slider-images/slider-img-01.png"
                                 class="absolute block w-full h-full object-cover top-0 left-0" alt="Slide 1">
                             </div>
-                            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                            <div class="hidden duration-700 ease-in-out transform-3d" data-carousel-item>
                                 <img src="./images/left-slider-images/slider-image-02.png"
                                 class="absolute block w-full h-full object-cover top-0 left-0" alt="Slide 2">
                             </div>
-                            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                            <div class="hidden duration-700 ease-in-out transform-3d" data-carousel-item>
                                 <img src="./images/left-slider-images/slider-image-03.png"
                                 class="absolute block w-full h-full object-cover top-0 left-0" alt="Slide 3">
                             </div>
-                            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                            <div class="hidden duration-700 ease-in-out transform-3d" data-carousel-item>
                                 <img src="./images/left-slider-images/slider-image-04.png"
                                 class="absolute block w-full h-full object-cover top-0 left-0" alt="Slide 3">
                             </div>
-                            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                            <div class="hidden duration-700 ease-in-out transform-3d" data-carousel-item>
                                 <img src="./images/left-slider-images/slider-image-05.png"
                                 class="absolute block w-full h-full object-cover top-0 left-0" alt="Slide 3">
                             </div>
-                            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                            <div class="hidden duration-700 ease-in-out transform-3d" data-carousel-item>
                                 <img src="./images/left-slider-images/slider-image-06.png"
                                 class="absolute block w-full h-full object-cover top-0 left-0" alt="Slide 3">
                             </div>
@@ -208,13 +209,13 @@
                 <!-- ===== Right Side: Two Sliders (Top + Bottom) ===== -->
                 <div class="md:col-span-4 flex flex-col gap-8">
                     <!-- Top Slider -->
-                    <div id="right-top-carousel" class="relative w-full" data-carousel="slide">
+                    <div id="right-top-carousel" class="relative w-full transform-3d" data-carousel="slide">
                         <div class="relative h-48 overflow-hidden rounded-lg">
-                            <div class="duration-700 ease-in-out" data-carousel-item="active">
+                            <div class="duration-700 ease-in-out transform-3d" data-carousel-item="active">
                                 <img src="./images/left-slider-images/slider-img-01.png"
                                 class="absolute block w-full h-full object-cover top-0 left-0" alt="Top Slide 1">
                             </div>
-                            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                            <div class="hidden duration-700 ease-in-out transform-3d" data-carousel-item>
                                 <img src="./images/left-slider-images/slider-image-02.png"
                                 class="absolute block w-full h-full object-cover top-0 left-0" alt="Top Slide 2">
                             </div>
@@ -244,7 +245,7 @@
                     <!-- Bottom Slider -->
                     <div id="right-bottom-carousel" class="relative w-full">
                         <div class="sub__slider h-48">
-                            <div class="sub-scroll-slider-container">
+                            <div class="sub-scroll-slider-container transform-3d">
                                 <img src="./images/left-slider-images/slider-img-01.png" alt="Bottom Slide 1">
                                 <img src="./images/left-slider-images/slider-image-02.png" alt="Bottom Slide 2">
                                 <img src="./images/left-slider-images/slider-image-03.png" alt="Bottom Slide 3">
@@ -279,7 +280,29 @@
                 </ul>
                 <div class="items-center justify-center space-y-4 sm:flex sm:space-y-0 sm:space-x-4 rtl:space-x-reverse mb-5">
                     <div class="grid grid-col-1 md:grid-cols-12 mt-4 mb-1">
-                        <div class="flex flex-col md:col-span-3 px-2 py-2">
+                        <div class="flex flex-col md:col-span-3 px-2 py-2 card-scroll transform-3d">
+                            <div class="max-w-sm p-6 bg-white border border-gray-200 rounded-md shadow-neutral-200 dark:bg-gray-800 dark:border-gray-700">
+                                <img class="px-4 py-3" src="./images/product-images/loader-scale-cate.png" alt="loader-scale-cate">
+                                <p class="px-4 text-left flex flex-row">
+                                    <span class="text-orange-300 font-sm text-xs"><i class="fa-solid fa-star"></i></span>
+                                    <span class="text-orange-300 font-sm text-xs"><i class="fa-solid fa-star"></i></span>
+                                    <span class="text-orange-300 font-sm text-xs"><i class="fa-solid fa-star"></i></span>
+                                    <span class="text-orange-300 font-sm text-xs"><i class="fa-solid fa-star"></i></span>
+                                    <span class="text-orange-300 font-sm text-xs"><i class="fa-solid fa-star"></i></span>
+                                </p>
+                                <p class="px-4 font-medium text-left text-gray-600 text-sm card-name-display-block">
+                                    <span>Loader Scale</span>
+                                </p>
+                                <p class=''>
+                                    <span class='transform-3d'>
+                                        <a class='bg-white hover:bg-indigo-500 shadow-indigo-400/50 hover:shadow-indigo-400/50 hover:text-white font-bold rounded-full p-1' href="#" data-tooltip-id="category-view-btn-icon" data-tooltip-content="View" data-tooltip-place="right">
+                                            <i class="fa-regular fa-eye"></i>
+                                        </a>
+                                    </span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex flex-col md:col-span-3 px-2 py-2 card-scroll transform-3d">
                             <div class="max-w-sm p-6 bg-white border border-gray-200 rounded-md shadow-neutral-200 dark:bg-gray-800 dark:border-gray-700">
                                 <svg class="w-7 h-7 text-gray-500 dark:text-gray-400 mb-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
                                     <path d="M18 5h-.7c.229-.467.349-.98.351-1.5a3.5 3.5 0 0 0-3.5-3.5c-1.717 0-3.215 1.2-4.331 2.481C8.4.842 6.949 0 5.5 0A3.5 3.5 0 0 0 2 3.5c.003.52.123 1.033.351 1.5H2a2 2 0 0 0-2 2v3a1 1 0 0 0 1 1h18a1 1 0 0 0 1-1V7a2 2 0 0 0-2-2ZM8.058 5H5.5a1.5 1.5 0 0 1 0-3c.9 0 2 .754 3.092 2.122-.219.337-.392.635-.534.878Zm6.1 0h-3.742c.933-1.368 2.371-3 3.739-3a1.5 1.5 0 0 1 0 3h.003ZM11 13H9v7h2v-7Zm-4 0H2v5a2 2 0 0 0 2 2h3v-7Zm6 0v7h3a2 2 0 0 0 2-2v-5h-5Z"/>
@@ -296,7 +319,7 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="flex flex-col md:col-span-3 px-2 py-2">
+                        <div class="flex flex-col md:col-span-3 px-2 py-2 card-scroll transform-3d">
                             <div class="max-w-sm p-6 bg-white border border-gray-200 rounded-md shadow-neutral-200 dark:bg-gray-800 dark:border-gray-700">
                                 <svg class="w-7 h-7 text-gray-500 dark:text-gray-400 mb-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
                                     <path d="M18 5h-.7c.229-.467.349-.98.351-1.5a3.5 3.5 0 0 0-3.5-3.5c-1.717 0-3.215 1.2-4.331 2.481C8.4.842 6.949 0 5.5 0A3.5 3.5 0 0 0 2 3.5c.003.52.123 1.033.351 1.5H2a2 2 0 0 0-2 2v3a1 1 0 0 0 1 1h18a1 1 0 0 0 1-1V7a2 2 0 0 0-2-2ZM8.058 5H5.5a1.5 1.5 0 0 1 0-3c.9 0 2 .754 3.092 2.122-.219.337-.392.635-.534.878Zm6.1 0h-3.742c.933-1.368 2.371-3 3.739-3a1.5 1.5 0 0 1 0 3h.003ZM11 13H9v7h2v-7Zm-4 0H2v5a2 2 0 0 0 2 2h3v-7Zm6 0v7h3a2 2 0 0 0 2-2v-5h-5Z"/>
@@ -313,7 +336,7 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="flex flex-col md:col-span-3 px-2 py-2">
+                        <div class="flex flex-col md:col-span-3 px-2 py-2 card-scroll transform-3d">
                             <div class="max-w-sm p-6 bg-white border border-gray-200 rounded-md shadow-neutral-200 dark:bg-gray-800 dark:border-gray-700">
                                 <svg class="w-7 h-7 text-gray-500 dark:text-gray-400 mb-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
                                     <path d="M18 5h-.7c.229-.467.349-.98.351-1.5a3.5 3.5 0 0 0-3.5-3.5c-1.717 0-3.215 1.2-4.331 2.481C8.4.842 6.949 0 5.5 0A3.5 3.5 0 0 0 2 3.5c.003.52.123 1.033.351 1.5H2a2 2 0 0 0-2 2v3a1 1 0 0 0 1 1h18a1 1 0 0 0 1-1V7a2 2 0 0 0-2-2ZM8.058 5H5.5a1.5 1.5 0 0 1 0-3c.9 0 2 .754 3.092 2.122-.219.337-.392.635-.534.878Zm6.1 0h-3.742c.933-1.368 2.371-3 3.739-3a1.5 1.5 0 0 1 0 3h.003ZM11 13H9v7h2v-7Zm-4 0H2v5a2 2 0 0 0 2 2h3v-7Zm6 0v7h3a2 2 0 0 0 2-2v-5h-5Z"/>
@@ -330,7 +353,7 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="flex flex-col md:col-span-3 px-2 py-2">
+                        <div class="flex flex-col md:col-span-3 px-2 py-2 card-scroll transform-3d">
                             <div class="max-w-sm p-6 bg-white border border-gray-200 rounded-md shadow-neutral-200 dark:bg-gray-800 dark:border-gray-700">
                                 <svg class="w-7 h-7 text-gray-500 dark:text-gray-400 mb-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
                                     <path d="M18 5h-.7c.229-.467.349-.98.351-1.5a3.5 3.5 0 0 0-3.5-3.5c-1.717 0-3.215 1.2-4.331 2.481C8.4.842 6.949 0 5.5 0A3.5 3.5 0 0 0 2 3.5c.003.52.123 1.033.351 1.5H2a2 2 0 0 0-2 2v3a1 1 0 0 0 1 1h18a1 1 0 0 0 1-1V7a2 2 0 0 0-2-2ZM8.058 5H5.5a1.5 1.5 0 0 1 0-3c.9 0 2 .754 3.092 2.122-.219.337-.392.635-.534.878Zm6.1 0h-3.742c.933-1.368 2.371-3 3.739-3a1.5 1.5 0 0 1 0 3h.003ZM11 13H9v7h2v-7Zm-4 0H2v5a2 2 0 0 0 2 2h3v-7Zm6 0v7h3a2 2 0 0 0 2-2v-5h-5Z"/>
@@ -347,7 +370,7 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="flex flex-col md:col-span-3 px-2 py-2">
+                        <div class="flex flex-col md:col-span-3 px-2 py-2 card-scroll transform-3d">
                             <div class="max-w-sm p-6 bg-white border border-gray-200 rounded-md shadow-neutral-200 dark:bg-gray-800 dark:border-gray-700">
                                 <svg class="w-7 h-7 text-gray-500 dark:text-gray-400 mb-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
                                     <path d="M18 5h-.7c.229-.467.349-.98.351-1.5a3.5 3.5 0 0 0-3.5-3.5c-1.717 0-3.215 1.2-4.331 2.481C8.4.842 6.949 0 5.5 0A3.5 3.5 0 0 0 2 3.5c.003.52.123 1.033.351 1.5H2a2 2 0 0 0-2 2v3a1 1 0 0 0 1 1h18a1 1 0 0 0 1-1V7a2 2 0 0 0-2-2ZM8.058 5H5.5a1.5 1.5 0 0 1 0-3c.9 0 2 .754 3.092 2.122-.219.337-.392.635-.534.878Zm6.1 0h-3.742c.933-1.368 2.371-3 3.739-3a1.5 1.5 0 0 1 0 3h.003ZM11 13H9v7h2v-7Zm-4 0H2v5a2 2 0 0 0 2 2h3v-7Zm6 0v7h3a2 2 0 0 0 2-2v-5h-5Z"/>
@@ -364,7 +387,7 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="flex flex-col md:col-span-3 px-2 py-2">
+                        <div class="flex flex-col md:col-span-3 px-2 py-2 card-scroll transform-3d">
                             <div class="max-w-sm p-6 bg-white border border-gray-200 rounded-md shadow-neutral-200 dark:bg-gray-800 dark:border-gray-700">
                                 <svg class="w-7 h-7 text-gray-500 dark:text-gray-400 mb-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
                                     <path d="M18 5h-.7c.229-.467.349-.98.351-1.5a3.5 3.5 0 0 0-3.5-3.5c-1.717 0-3.215 1.2-4.331 2.481C8.4.842 6.949 0 5.5 0A3.5 3.5 0 0 0 2 3.5c.003.52.123 1.033.351 1.5H2a2 2 0 0 0-2 2v3a1 1 0 0 0 1 1h18a1 1 0 0 0 1-1V7a2 2 0 0 0-2-2ZM8.058 5H5.5a1.5 1.5 0 0 1 0-3c.9 0 2 .754 3.092 2.122-.219.337-.392.635-.534.878Zm6.1 0h-3.742c.933-1.368 2.371-3 3.739-3a1.5 1.5 0 0 1 0 3h.003ZM11 13H9v7h2v-7Zm-4 0H2v5a2 2 0 0 0 2 2h3v-7Zm6 0v7h3a2 2 0 0 0 2-2v-5h-5Z"/>
@@ -381,24 +404,7 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="flex flex-col md:col-span-3 px-2 py-2">
-                            <div class="max-w-sm p-6 bg-white border border-gray-200 rounded-md shadow-neutral-200 dark:bg-gray-800 dark:border-gray-700">
-                                <svg class="w-7 h-7 text-gray-500 dark:text-gray-400 mb-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                                    <path d="M18 5h-.7c.229-.467.349-.98.351-1.5a3.5 3.5 0 0 0-3.5-3.5c-1.717 0-3.215 1.2-4.331 2.481C8.4.842 6.949 0 5.5 0A3.5 3.5 0 0 0 2 3.5c.003.52.123 1.033.351 1.5H2a2 2 0 0 0-2 2v3a1 1 0 0 0 1 1h18a1 1 0 0 0 1-1V7a2 2 0 0 0-2-2ZM8.058 5H5.5a1.5 1.5 0 0 1 0-3c.9 0 2 .754 3.092 2.122-.219.337-.392.635-.534.878Zm6.1 0h-3.742c.933-1.368 2.371-3 3.739-3a1.5 1.5 0 0 1 0 3h.003ZM11 13H9v7h2v-7Zm-4 0H2v5a2 2 0 0 0 2 2h3v-7Zm6 0v7h3a2 2 0 0 0 2-2v-5h-5Z"/>
-                                </svg>
-                                <a href="#">
-                                    <h5 class="mb-2 text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">Need a help in Claim?</h5>
-                                </a>
-                                <p class="mb-3 font-normal text-gray-500 dark:text-gray-400">Go to this step by step guideline process on how to certify for your weekly benefits:</p>
-                                <a href="#" class="inline-flex font-medium items-center text-blue-600 hover:underline">
-                                    See our guideline
-                                    <svg class="w-3 h-3 ms-2.5 rtl:rotate-[270deg]" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
-                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11v4.833A1.166 1.166 0 0 1 13.833 17H2.167A1.167 1.167 0 0 1 1 15.833V4.167A1.166 1.166 0 0 1 2.167 3h4.618m4.447-2H17v5.768M9.111 8.889l7.778-7.778"/>
-                                    </svg>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="flex flex-col md:col-span-3 px-2 py-2">
+                        <div class="flex flex-col md:col-span-3 px-2 py-2 card-scroll transform-3d">
                             <div class="max-w-sm p-6 bg-white border border-gray-200 rounded-md shadow-neutral-200 dark:bg-gray-800 dark:border-gray-700">
                                 <svg class="w-7 h-7 text-gray-500 dark:text-gray-400 mb-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
                                     <path d="M18 5h-.7c.229-.467.349-.98.351-1.5a3.5 3.5 0 0 0-3.5-3.5c-1.717 0-3.215 1.2-4.331 2.481C8.4.842 6.949 0 5.5 0A3.5 3.5 0 0 0 2 3.5c.003.52.123 1.033.351 1.5H2a2 2 0 0 0-2 2v3a1 1 0 0 0 1 1h18a1 1 0 0 0 1-1V7a2 2 0 0 0-2-2ZM8.058 5H5.5a1.5 1.5 0 0 1 0-3c.9 0 2 .754 3.092 2.122-.219.337-.392.635-.534.878Zm6.1 0h-3.742c.933-1.368 2.371-3 3.739-3a1.5 1.5 0 0 1 0 3h.003ZM11 13H9v7h2v-7Zm-4 0H2v5a2 2 0 0 0 2 2h3v-7Zm6 0v7h3a2 2 0 0 0 2-2v-5h-5Z"/>
@@ -428,7 +434,7 @@
                 </ul>
                 <div class="items-center justify-center space-y-4 sm:flex sm:space-y-0 sm:space-x-4 rtl:space-x-reverse mb-5">
                     <div class="grid grid-col-1 md:grid-cols-12 mt-4 mb-1">
-                        <div class="flex flex-col md:col-span-3 px-2 py-2">
+                        <div class="flex flex-col md:col-span-3 px-2 py-2 card-scroll">
                             <div class="max-w-sm p-6 bg-white border border-gray-200 rounded-md shadow-neutral-200 dark:bg-gray-800 dark:border-gray-700">
                                 <svg class="w-7 h-7 text-gray-500 dark:text-gray-400 mb-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
                                     <path d="M18 5h-.7c.229-.467.349-.98.351-1.5a3.5 3.5 0 0 0-3.5-3.5c-1.717 0-3.215 1.2-4.331 2.481C8.4.842 6.949 0 5.5 0A3.5 3.5 0 0 0 2 3.5c.003.52.123 1.033.351 1.5H2a2 2 0 0 0-2 2v3a1 1 0 0 0 1 1h18a1 1 0 0 0 1-1V7a2 2 0 0 0-2-2ZM8.058 5H5.5a1.5 1.5 0 0 1 0-3c.9 0 2 .754 3.092 2.122-.219.337-.392.635-.534.878Zm6.1 0h-3.742c.933-1.368 2.371-3 3.739-3a1.5 1.5 0 0 1 0 3h.003ZM11 13H9v7h2v-7Zm-4 0H2v5a2 2 0 0 0 2 2h3v-7Zm6 0v7h3a2 2 0 0 0 2-2v-5h-5Z"/>
@@ -445,7 +451,7 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="flex flex-col md:col-span-3 px-2 py-2">
+                        <div class="flex flex-col md:col-span-3 px-2 py-2 card-scroll">
                             <div class="max-w-sm p-6 bg-white border border-gray-200 rounded-md shadow-neutral-200 dark:bg-gray-800 dark:border-gray-700">
                                 <svg class="w-7 h-7 text-gray-500 dark:text-gray-400 mb-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
                                     <path d="M18 5h-.7c.229-.467.349-.98.351-1.5a3.5 3.5 0 0 0-3.5-3.5c-1.717 0-3.215 1.2-4.331 2.481C8.4.842 6.949 0 5.5 0A3.5 3.5 0 0 0 2 3.5c.003.52.123 1.033.351 1.5H2a2 2 0 0 0-2 2v3a1 1 0 0 0 1 1h18a1 1 0 0 0 1-1V7a2 2 0 0 0-2-2ZM8.058 5H5.5a1.5 1.5 0 0 1 0-3c.9 0 2 .754 3.092 2.122-.219.337-.392.635-.534.878Zm6.1 0h-3.742c.933-1.368 2.371-3 3.739-3a1.5 1.5 0 0 1 0 3h.003ZM11 13H9v7h2v-7Zm-4 0H2v5a2 2 0 0 0 2 2h3v-7Zm6 0v7h3a2 2 0 0 0 2-2v-5h-5Z"/>
@@ -462,7 +468,7 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="flex flex-col md:col-span-3 px-2 py-2">
+                        <div class="flex flex-col md:col-span-3 px-2 py-2 card-scroll">
                             <div class="max-w-sm p-6 bg-white border border-gray-200 rounded-md shadow-neutral-200 dark:bg-gray-800 dark:border-gray-700">
                                 <svg class="w-7 h-7 text-gray-500 dark:text-gray-400 mb-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
                                     <path d="M18 5h-.7c.229-.467.349-.98.351-1.5a3.5 3.5 0 0 0-3.5-3.5c-1.717 0-3.215 1.2-4.331 2.481C8.4.842 6.949 0 5.5 0A3.5 3.5 0 0 0 2 3.5c.003.52.123 1.033.351 1.5H2a2 2 0 0 0-2 2v3a1 1 0 0 0 1 1h18a1 1 0 0 0 1-1V7a2 2 0 0 0-2-2ZM8.058 5H5.5a1.5 1.5 0 0 1 0-3c.9 0 2 .754 3.092 2.122-.219.337-.392.635-.534.878Zm6.1 0h-3.742c.933-1.368 2.371-3 3.739-3a1.5 1.5 0 0 1 0 3h.003ZM11 13H9v7h2v-7Zm-4 0H2v5a2 2 0 0 0 2 2h3v-7Zm6 0v7h3a2 2 0 0 0 2-2v-5h-5Z"/>
@@ -479,7 +485,7 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="flex flex-col md:col-span-3 px-2 py-2">
+                        <div class="flex flex-col md:col-span-3 px-2 py-2 card-scroll">
                             <div class="max-w-sm p-6 bg-white border border-gray-200 rounded-md shadow-neutral-200 dark:bg-gray-800 dark:border-gray-700">
                                 <svg class="w-7 h-7 text-gray-500 dark:text-gray-400 mb-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
                                     <path d="M18 5h-.7c.229-.467.349-.98.351-1.5a3.5 3.5 0 0 0-3.5-3.5c-1.717 0-3.215 1.2-4.331 2.481C8.4.842 6.949 0 5.5 0A3.5 3.5 0 0 0 2 3.5c.003.52.123 1.033.351 1.5H2a2 2 0 0 0-2 2v3a1 1 0 0 0 1 1h18a1 1 0 0 0 1-1V7a2 2 0 0 0-2-2ZM8.058 5H5.5a1.5 1.5 0 0 1 0-3c.9 0 2 .754 3.092 2.122-.219.337-.392.635-.534.878Zm6.1 0h-3.742c.933-1.368 2.371-3 3.739-3a1.5 1.5 0 0 1 0 3h.003ZM11 13H9v7h2v-7Zm-4 0H2v5a2 2 0 0 0 2 2h3v-7Zm6 0v7h3a2 2 0 0 0 2-2v-5h-5Z"/>
@@ -496,7 +502,7 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="flex flex-col md:col-span-3 px-2 py-2">
+                        <div class="flex flex-col md:col-span-3 px-2 py-2 card-scroll">
                             <div class="max-w-sm p-6 bg-white border border-gray-200 rounded-md shadow-neutral-200 dark:bg-gray-800 dark:border-gray-700">
                                 <svg class="w-7 h-7 text-gray-500 dark:text-gray-400 mb-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
                                     <path d="M18 5h-.7c.229-.467.349-.98.351-1.5a3.5 3.5 0 0 0-3.5-3.5c-1.717 0-3.215 1.2-4.331 2.481C8.4.842 6.949 0 5.5 0A3.5 3.5 0 0 0 2 3.5c.003.52.123 1.033.351 1.5H2a2 2 0 0 0-2 2v3a1 1 0 0 0 1 1h18a1 1 0 0 0 1-1V7a2 2 0 0 0-2-2ZM8.058 5H5.5a1.5 1.5 0 0 1 0-3c.9 0 2 .754 3.092 2.122-.219.337-.392.635-.534.878Zm6.1 0h-3.742c.933-1.368 2.371-3 3.739-3a1.5 1.5 0 0 1 0 3h.003ZM11 13H9v7h2v-7Zm-4 0H2v5a2 2 0 0 0 2 2h3v-7Zm6 0v7h3a2 2 0 0 0 2-2v-5h-5Z"/>
@@ -513,7 +519,7 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="flex flex-col md:col-span-3 px-2 py-2">
+                        <div class="flex flex-col md:col-span-3 px-2 py-2 card-scroll">
                             <div class="max-w-sm p-6 bg-white border border-gray-200 rounded-md shadow-neutral-200 dark:bg-gray-800 dark:border-gray-700">
                                 <svg class="w-7 h-7 text-gray-500 dark:text-gray-400 mb-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
                                     <path d="M18 5h-.7c.229-.467.349-.98.351-1.5a3.5 3.5 0 0 0-3.5-3.5c-1.717 0-3.215 1.2-4.331 2.481C8.4.842 6.949 0 5.5 0A3.5 3.5 0 0 0 2 3.5c.003.52.123 1.033.351 1.5H2a2 2 0 0 0-2 2v3a1 1 0 0 0 1 1h18a1 1 0 0 0 1-1V7a2 2 0 0 0-2-2ZM8.058 5H5.5a1.5 1.5 0 0 1 0-3c.9 0 2 .754 3.092 2.122-.219.337-.392.635-.534.878Zm6.1 0h-3.742c.933-1.368 2.371-3 3.739-3a1.5 1.5 0 0 1 0 3h.003ZM11 13H9v7h2v-7Zm-4 0H2v5a2 2 0 0 0 2 2h3v-7Zm6 0v7h3a2 2 0 0 0 2-2v-5h-5Z"/>
@@ -530,7 +536,7 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="flex flex-col md:col-span-3 px-2 py-2">
+                        <div class="flex flex-col md:col-span-3 px-2 py-2 card-scroll">
                             <div class="max-w-sm p-6 bg-white border border-gray-200 rounded-md shadow-neutral-200 dark:bg-gray-800 dark:border-gray-700">
                                 <svg class="w-7 h-7 text-gray-500 dark:text-gray-400 mb-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
                                     <path d="M18 5h-.7c.229-.467.349-.98.351-1.5a3.5 3.5 0 0 0-3.5-3.5c-1.717 0-3.215 1.2-4.331 2.481C8.4.842 6.949 0 5.5 0A3.5 3.5 0 0 0 2 3.5c.003.52.123 1.033.351 1.5H2a2 2 0 0 0-2 2v3a1 1 0 0 0 1 1h18a1 1 0 0 0 1-1V7a2 2 0 0 0-2-2ZM8.058 5H5.5a1.5 1.5 0 0 1 0-3c.9 0 2 .754 3.092 2.122-.219.337-.392.635-.534.878Zm6.1 0h-3.742c.933-1.368 2.371-3 3.739-3a1.5 1.5 0 0 1 0 3h.003ZM11 13H9v7h2v-7Zm-4 0H2v5a2 2 0 0 0 2 2h3v-7Zm6 0v7h3a2 2 0 0 0 2-2v-5h-5Z"/>
@@ -547,7 +553,7 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="flex flex-col md:col-span-3 px-2 py-2">
+                        <div class="flex flex-col md:col-span-3 px-2 py-2 card-scroll">
                             <div class="max-w-sm p-6 bg-white border border-gray-200 rounded-md shadow-neutral-200 dark:bg-gray-800 dark:border-gray-700">
                                 <svg class="w-7 h-7 text-gray-500 dark:text-gray-400 mb-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
                                     <path d="M18 5h-.7c.229-.467.349-.98.351-1.5a3.5 3.5 0 0 0-3.5-3.5c-1.717 0-3.215 1.2-4.331 2.481C8.4.842 6.949 0 5.5 0A3.5 3.5 0 0 0 2 3.5c.003.52.123 1.033.351 1.5H2a2 2 0 0 0-2 2v3a1 1 0 0 0 1 1h18a1 1 0 0 0 1-1V7a2 2 0 0 0-2-2ZM8.058 5H5.5a1.5 1.5 0 0 1 0-3c.9 0 2 .754 3.092 2.122-.219.337-.392.635-.534.878Zm6.1 0h-3.742c.933-1.368 2.371-3 3.739-3a1.5 1.5 0 0 1 0 3h.003ZM11 13H9v7h2v-7Zm-4 0H2v5a2 2 0 0 0 2 2h3v-7Zm6 0v7h3a2 2 0 0 0 2-2v-5h-5Z"/>
@@ -1348,7 +1354,7 @@
                 </span>
                 <div class="input-wrapper">
                     <span class="fake-caret ms-1"></span>
-                    <input type="text" class="text-left text-gray-700 font-semibold text-base bg-white outline-none shadow-none w-100 h-10 rounded-tl-md rounded-bl-md input_cursor ps-2 ms-2" placeholder="Your Email Address..." id="subMitNewLetter" autocomplete="off">
+                    <input type="text" class="caret-blue-500 text-left text-gray-700 font-semibold text-base bg-white outline-none shadow-none w-100 h-10 rounded-tl-md rounded-bl-md input_cursor ps-2 ms-2" placeholder="Your Email Address..." id="subMitNewLetter" autocomplete="off">
                 </div>
                 <button type="button" class="text-white bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-base px-5 py-1.5 text-center me-2 cursor-pointer rounded-tl-none rounded-bl-none outline-none button-shadow" id="subcribe">Subscribe</button>
             </div>
@@ -1437,7 +1443,7 @@
             </div>
         </div>
         <div class="grid grid-col-1 md:grid-cols-12 grap-2 px-5 py-5">
-            <div class="flex flex-col md:col-span-3 mx-3 px-2 py-2 bg-transparent rounded-s-sm rounded-r-sm shadow-lg border border-gray-700 pb-2">
+            <div class="flex flex-col md:col-span-3 mx-3 px-2 py-2 bg-transparent rounded-s-sm rounded-r-sm shadow-lg border border-gray-700 pb-2 card-scroll transform-3d">
                 <span class="text-md text-left font-semibold text-indigo-200 dark:text-white dark:text-shadow-2xs shadow-sm uppercase ps-2 mb-2">Company Information</span>
                 <span class="text-indigo-100 dark:text-white dark:text-shadow-2xs text-left text-sm font-normal transition-opacity ps-2">Company Name</span>
                 <span class="text-indigo-100 dark:text-white dark:text-shadow-2xs text-left text-sm font-normal transition-opacity ps-2">
@@ -1456,40 +1462,40 @@
                     Linkedin : <span>..........</span>
                 </span>
             </div>
-            <div class="flex flex-col md:col-span-3 mx-3 px-2 py-2 bg-transparent rounded-s-sm rounded-r-sm shadow-lg border border-gray-600 pb-2">
+            <div class="flex flex-col md:col-span-3 mx-3 px-2 py-2 bg-transparent rounded-s-sm rounded-r-sm shadow-lg border border-gray-600 pb-2 card-scroll transform-3d">
                 <span class="text-md text-left font-semibold text-indigo-200 dark:text-white dark:text-shadow-2xs shadow-sm uppercase ps-2 mb-2">Helpfull Links</span>
                 <a type="button" href="#" class="text-indigo-100 dark:text-white dark:text-shadow-2xs text-left text-sm font-normal hover:text-indigo-300 transition-opacity ps-2">
-                    About-us
+                    ➤ About-us
                 </a>
                 <a type="button" href="#" class="text-indigo-100 dark:text-white dark:text-shadow-2xs text-left text-sm font-normal hover:text-indigo-300 transition-opacity ps-2">
-                    Contract-us
+                    ➤ Contract-us
                 </a>
                 <a type="button" href="#" class="text-indigo-100 dark:text-white dark:text-shadow-2xs text-left text-sm font-normal hover:text-indigo-300 transition-opacity ps-2">
-                    Customer Satisfy
+                    ➤ Customer Satisfy
                 </a>
                 <a type="button" href="#" class="text-indigo-100 dark:text-white dark:text-shadow-2xs text-left text-sm font-normal hover:text-indigo-300 transition-opacity ps-2">
-                    Testimonial
+                    ➤ Testimonial
                 </a>
             </div>
-            <div class="flex flex-col md:col-span-3 mx-3 px-2 py-2 bg-transparent rounded-s-sm rounded-r-sm shadow-lg border border-gray-600 pb-2">
+            <div class="flex flex-col md:col-span-3 mx-3 px-2 py-2 bg-transparent rounded-s-sm rounded-r-sm shadow-lg border border-gray-600 pb-2 card-scroll transform-3d">
                 <span class="text-md text-left font-semibold text-indigo-200 dark:text-white dark:text-shadow-2xs shadow-sm uppercase ps-2 mb-2">Bussiness Reference</span>
                 <a type="button" href="#" class="text-indigo-100 dark:text-white dark:text-shadow-2xs text-left text-sm font-normal hover:text-indigo-300 transition-opacity ps-2">
                     ➤ Releative another bussiness link-01
                 </a>
                 <a type="button" href="#" class="text-indigo-100 dark:text-white dark:text-shadow-2xs text-left text-sm font-normal hover:text-indigo-300 transition-opacity ps-2">
-                    Releative another bussiness link-02
+                    ➤ Releative another bussiness link-02
                 </a>
                 <a type="button" href="#" class="text-indigo-100 dark:text-white dark:text-shadow-2xs text-left text-sm font-normal hover:text-indigo-300 transition-opacity ps-2">
-                    Releative another bussiness link-03
+                    ➤ Releative another bussiness link-03
                 </a>
                 <a type="button" href="#" class="text-indigo-100 dark:text-white dark:text-shadow-2xs text-left text-sm font-normal hover:text-indigo-300 transition-opacity ps-2">
-                    Releative another bussiness link-04
+                    ➤ Releative another bussiness link-04
                 </a>
             </div>
-            <div class="flex flex-col md:col-span-3 mx-3 px-2 py-2 bg-transparent rounded-s-sm rounded-r-sm shadow-lg border border-gray-700 pb-2">
+            <div class="flex flex-col md:col-span-3 mx-3 px-2 py-2 bg-transparent rounded-s-sm rounded-r-sm shadow-lg border border-gray-700 pb-2 card-scroll transform-3d">
                 <span class="text-md text-left font-semibold text-indigo-200 dark:text-white dark:text-shadow-2xs shadow-sm uppercase ps-2 mb-2">Social Media</span>
                 <div class="flex flex-row justify-evenly pt-5">
-                    <span class="media_group">
+                    <span class="media_group transform-3d">
                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="40px" width="40px" version="1.1" id="Layer_1" viewBox="0 0 474.294 474.294" xml:space="preserve">
                         <circle style="fill:#3A5A98;" cx="237.111" cy="236.966" r="236.966"/>
                         <path style="fill:#345387;" d="M404.742,69.754c92.541,92.541,92.545,242.586-0.004,335.134  c-92.545,92.541-242.593,92.541-335.134,0L404.742,69.754z"/>
@@ -1497,7 +1503,7 @@
                         <path style="fill:#FFFFFF;" d="M195.682,148.937c0,7.27,0,39.741,0,39.741h-29.115v48.598h29.115v144.402h59.808V237.276h40.134  c0,0,3.76-23.307,5.579-48.781c-5.224,0-45.485,0-45.485,0s0-28.276,0-33.231c0-4.962,6.518-11.641,12.965-11.641  c6.436,0,20.015,0,32.587,0c0-6.623,0-29.481,0-50.592c-16.786,0-35.883,0-44.306,0C194.201,93.028,195.682,141.671,195.682,148.937  z"/>
                         </svg>
                     </span>
-                    <span class="media_group">
+                    <span class="media_group transform-3d">
                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="40px" width="40px" version="1.1" id="Layer_1" viewBox="0 0 473.931 473.931" xml:space="preserve">
                         <circle style="fill:#4A86C5;" cx="236.966" cy="236.966" r="236.966"/>
                         <path style="fill:#3D80B2;" d="M404.518,69.383c92.541,92.549,92.549,242.59,0,335.138c-92.541,92.541-242.593,92.541-335.134,0  L404.518,69.383z"/>
@@ -1509,7 +1515,7 @@
                         <path style="fill:#FFFFFF;" d="M358.565,230.459v87.883h-50.944v-81.997c0-20.595-7.375-34.656-25.811-34.656  c-14.084,0-22.458,9.474-26.147,18.634c-1.343,3.278-1.688,7.835-1.688,12.423v85.593H203.02c0,0,0.681-138.875,0-153.259h50.952  V186.8c-0.094,0.161-0.236,0.34-0.329,0.498h0.329V186.8c6.769-10.425,18.862-25.324,45.923-25.324  C333.432,161.479,358.565,183.384,358.565,230.459z M149.7,91.198c-17.429,0-28.838,11.439-28.838,26.473  c0,14.716,11.072,26.495,28.164,26.495h0.344c17.766,0,28.823-11.779,28.823-26.495C177.857,102.636,167.137,91.198,149.7,91.198z   M123.886,318.341h50.944V165.083h-50.944V318.341z"/>
                         </svg>
                     </span>
-                    <span class="media_group">
+                    <span class="media_group transform-3d">
                         <svg xmlns="http://www.w3.org/2000/svg" width="40px" height="40px" viewBox="-1 0 226 226" version="1.1">
                             <defs>
                             <linearGradient id="a" y1="6.76%" x2="50%" x1="50%" y2="95.6%">
@@ -1521,10 +1527,10 @@
                             <path fill="#ffffff" d="m100.04 75.878l-60.401 63.952 54.97-30.16 28.721 30.16 60.06-63.952-54.36 29.632-28.99-29.632z"/>
                         </svg>
                     </span>
-                    <span class="media_group">
+                    <span class="media_group transform-3d">
                         <svg xmlns="http://www.w3.org/2000/svg" width="40px" height="40px" viewBox="126.444 2.281 589 589"><circle cx="420.944" cy="296.781" r="294.5" fill="#2daae1"/><path d="M609.773 179.634c-13.891 6.164-28.811 10.331-44.498 12.204 16.01-9.587 28.275-24.779 34.066-42.86a154.78 154.78 0 0 1-49.209 18.801c-14.125-15.056-34.267-24.456-56.551-24.456-42.773 0-77.462 34.675-77.462 77.473 0 6.064.683 11.98 1.996 17.66-64.389-3.236-121.474-34.079-159.684-80.945-6.672 11.446-10.491 24.754-10.491 38.953 0 26.875 13.679 50.587 34.464 64.477a77.122 77.122 0 0 1-35.097-9.686v.979c0 37.54 26.701 68.842 62.145 75.961-6.511 1.784-13.344 2.716-20.413 2.716-4.998 0-9.847-.473-14.584-1.364 9.859 30.769 38.471 53.166 72.363 53.799-26.515 20.785-59.925 33.175-96.212 33.175-6.25 0-12.427-.373-18.491-1.104 34.291 21.988 75.006 34.824 118.759 34.824 142.496 0 220.428-118.052 220.428-220.428 0-3.361-.074-6.697-.236-10.021a157.855 157.855 0 0 0 38.707-40.158z" fill="#ffffff"/></svg>
                     </span>
-                    <span class="media_group">
+                    <span class="media_group transform-3d">
                         <svg xmlns="http://www.w3.org/2000/svg" height="40px" width="40px" viewBox="0 0 461.001 461.001">
                             <g>
                                 <!-- Red background -->
@@ -1539,7 +1545,7 @@
                     </span>
                 </div>
             </div>
-        </div>
+        </div> 
     </footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -1552,14 +1558,33 @@
         customCursor('.input_cursor', '.fake-caret');
 
         $(window).on('scroll', function() {
+            let scrollPos = $(window).scrollTop();
             const $header = $('.nav-bg');
-            if ($(this).scrollTop() > 50) {
-                $header.addClass('scrolled');
-                $('.text-scroll').addClass('text-scrolled');
-            } else {
-                $header.removeClass('scrolled');
-                $('.text-scroll').removeClass('text-scrolled');
-            }
+            const $text = $('.text-scroll');
+            const $card = $('.card-scroll');
+
+            $('section').each(function() {
+                let sectionTop = $(this).offset().top - 100;
+                let sectionBottom = sectionTop + $(this).outerHeight();
+
+                // When the scroll position is inside this section
+                if (scrollPos >= sectionTop && scrollPos < sectionBottom) {
+
+                    // 👇 Your scroll distance check inside this section
+                    if (scrollPos > sectionTop + 50) {
+                        $header.addClass('scrolled');
+                        $text.addClass('text-scrolled');
+                        $card.addClass('card-focus');
+                    }else if (scrollPos > sectionTop + 80 ){
+                        $card.addClass('card-focus');
+                    } else {
+                        $header.removeClass('scrolled');
+                        $text.removeClass('text-scrolled');
+                        $card.removeClass('card-focus');
+                    }
+
+                }
+            });
         });
 
         // skeleton
