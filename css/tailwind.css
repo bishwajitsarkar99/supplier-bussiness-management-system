@@ -5,8 +5,6 @@
     /* --css-skeletone-ui:linear-gradient(90deg, silver 25%, rgba(0, 0, 0, 0.15) 37%, gray 63%); */
     --menu-card-bg: radial-gradient(farthest-corner at 100px 100px, #fff, #fff);
     --menu-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    --image-transform:translateZ(20);
-    --image-cursor:cell;
     --image-transition:all 0.6s;
     --image-50-transform:translateY(50px);
     --image-100-transform:translateX(0px);
@@ -18,11 +16,8 @@
     --card-name-100-letter-spacing:1px;
     --card-name-100-transform:translateX(10px);
     --card-name-animation:textDesign 2s linear infinite alternate;
-
-    --animation-transform-1245:translateX(-50%) translateY(-50%) translateZ(0) scale(1);
-    --animation-transform-1246:translateX(-50%) translateY(-50%) translateZ(0) scale(1.5);
-    --animation-transform-1256:translateX(-50%) translateY(-50%) translateZ(0) scale(1);
-    --animation-transform-1257:translateX(-50%) translateY(-50%) translateZ(0) scale(1.5);
+    --dot-skeletone-bg:linear-gradient(90deg, rgba(0, 0, 0, 0.06) 25%, rgba(0, 0, 0, 0.15) 37%, rgba(0, 0, 0, 0.06) 63%);
+    --dot-bg:linear-gradient(90deg,#fff 23%,#fff 37%,#fff 63%);
 }
 body{
     color: #212529;
@@ -271,7 +266,7 @@ button#searchBtn{
   }
 }
 .display_none{
-    display: none;
+    display: none !important;
 }
 
 /* [Scroll-image Slider] */
@@ -446,14 +441,37 @@ button.button-shadow{
     opacity: 1;
   }
 }
+.product__category__box {
+    position: relative;
+    overflow: hidden;
+}
+.product__box {
+    position: relative;
+    overflow: hidden;
+}
+.view__btn__icon a{
+  visibility: hidden;
+  position: relative;
+  display: flex;
+}
+.product__category__box:hover .btn__icon a {
+    transform: translateX(-300%);
+    transition: all .6s;
+    visibility: visible;
+}
+.product__box:hover .btn__icon a {
+    transform: translateX(-80%);
+    transition: all .6s;
+    visibility: visible;
+}
 .card-name-display-block{
     display: block;
     font-size: 14px;
-    margin-left: 21px;
     margin-top: -8px;
     font-family: var(--font-family-features);
     animation: var(--card-name-animation);
     transform: var(--card-name-transform);
+    color: #666 !important;
 }
 @keyframes textDesign{
     0%{
@@ -470,4 +488,299 @@ button.button-shadow{
         transition: var(--card-name-common-transition);
         transform: var(--card-name-100-transform);
     }
+}
+.tooltip-btn {
+  position: relative;
+  display: inline-block;
+}
+.custom-tooltip {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  left: 120%;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgb(75, 97, 219);
+  color: #fff;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 12px;
+  white-space: nowrap;
+  transition: opacity 0.3s ease;
+}
+.tooltip-btn:hover .custom-tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+/* Arrow */
+.custom-tooltip::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -5px;
+  transform: translateY(-50%) rotate(45deg);
+  width: 8px;
+  height: 8px;
+  background-color: rgb(75, 97, 219);
+}
+.tooltip-top-btn {
+  position: relative;
+  display: inline-block;
+}
+.custom-top-tooltip {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  bottom: 100%; /* place above the button */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgb(75, 97, 219);
+  color: #fff;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 12px;
+  white-space: nowrap;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+.tooltip-top-btn:hover .custom-top-tooltip {
+  visibility: visible;
+  opacity: 1;
+  transform: translateX(-50%) translateY(-6px);
+}
+/* Arrow */
+.custom-top-tooltip::after {
+  content: "";
+  position: absolute;
+  bottom: -4px; /* aligns arrow directly beneath tooltip */
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+  width: 8px;
+  height: 8px;
+  background-color: rgb(75, 97, 219);
+}
+.image-box {
+  transition: transform 0.6s ease-in-out, opacity 0.6s ease-in-out;
+  transform-origin: center center;
+  will-change: transform, opacity;
+}
+.image-box:hover {
+  opacity: 0.9;
+  transform: perspective(800px) translateZ(20px) scale3d(1.1, 1.1, 1.1) rotateX(2deg) rotateY(-2deg);
+}
+.svg_doted{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: var(--dot-bg);
+    width: 160px;
+    height: 160px;
+    margin-top: 18px;
+    margin-bottom: 70px;
+    font-size: 50px;
+    color: silver;
+}
+.popular_svg_doted{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: var(--dot-bg);
+    width: 160px;
+    height: 50px;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    font-size: 50px;
+    color: silver;
+}
+.left_svg_doted{
+  display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: var(--dot-bg);
+    width: 100%;
+    height: 425px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 50px;
+    color: silver;
+}
+.doted-skeletone,.card-title-skeletone,.rating-skeletone,.price-skeletone,.popular-doted-skeletone,.popular-rating-skeletone,.popular-brand-rating-skeletone
+,.left-doted-skeletone,.footer-doted-skeletone{
+    position: relative;
+    /* background-color: rgb(0,0,0,0.06); */
+}
+.doted-skeletone::before{
+    content:"";
+    position:absolute;
+    box-sizing: border-box;
+    justify-content: space-between;
+    left:1;
+    z-index: 2;
+    margin-top: 0px;
+    min-height: 160px;
+    width: 160px;
+    border-radius: 1px;
+    background: var(--dot-skeletone-bg);
+    background-size: 400% 100%;
+    animation-name: css-skeleton-loading;
+    animation-duration: 1.4s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+}
+.left-doted-skeletone::before{
+  content:"";
+    position:absolute;
+    box-sizing: border-box;
+    justify-content: space-between;
+    left:1;
+    z-index: 2;
+    margin-top: 0px;
+    height: 100%;
+    width: 100%;
+    border-radius: 1px;
+    background: linear-gradient(90deg,#e6e6e6 25%,#d4d4d4 37%,#f1f1f1 63%);
+    background-size: 300% 100%;
+    animation-name: css-skeleton-loading;
+    animation-duration: 1.4s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+}
+.footer-doted-skeletone::before{
+  content:"";
+    position:absolute;
+    box-sizing: border-box;
+    justify-content: space-between;
+    left:1;
+    z-index: 2;
+    margin-top: -7px;
+    margin-left: -7px;
+    height: 100%;
+    width: 100%;
+    border-radius: 1px;
+    background: linear-gradient(90deg,#e6e6e6 25%,#d4d4d4 37%,#f1f1f1 63%);
+    background-size: 300% 100%;
+    animation-name: css-skeleton-loading;
+    animation-duration: 1.4s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+}
+.popular-doted-skeletone::before{
+    content:"";
+    position:absolute;
+    box-sizing: border-box;
+    justify-content: space-between;
+    left:1;
+    z-index: 2;
+    margin-top: 0px;
+    min-height: 80px;
+    width: 160px;
+    border-radius: 1px;
+    background: var(--dot-skeletone-bg);
+    background-size: 400% 100%;
+    animation-name: css-skeleton-loading;
+    animation-duration: 1.4s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+}
+@keyframes css-skeleton-loading{
+    0% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0 50%;
+    }
+}
+.card-title-skeletone::before{
+    content:"";
+    position:absolute;
+    box-sizing: border-box;
+    justify-content: space-between;
+    left:1;
+    z-index: 2;
+    margin-top: -6px;
+    margin-left: -65px;
+    min-height: 15px;
+    width: 128px;
+    border-radius: 1px;
+    background: var(--dot-skeletone-bg);
+    background-size: 400% 100%;
+    animation-name: css-skeleton-loading;
+    animation-duration: 1.4s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+}
+.rating-skeletone::before{
+    content: "";
+    position: absolute;
+    box-sizing: border-box;
+    justify-content: space-between;
+    left: 1;
+    z-index: 2;
+    margin-top: -30px;
+    min-height: 15px;
+    margin-left: 9px;
+    width: 129px;
+    border-radius: 2px;
+    background: var(--dot-skeletone-bg);
+    background-size: 400% 100%;
+    animation-name: css-skeleton-loading;
+    animation-duration: 1.4s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+}
+.popular-rating-skeletone::before{
+    content: "";
+    position: absolute;
+    box-sizing: border-box;
+    justify-content: space-between;
+    left: 1;
+    z-index: 2;
+    margin-top: -30px;
+    min-height: 15px;
+    margin-left: 31px;
+    width: 129px;
+    border-radius: 2px;
+    background: var(--dot-skeletone-bg);
+    background-size: 400% 100%;
+    animation-name: css-skeleton-loading;
+    animation-duration: 1.4s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+}
+.popular-brand-rating-skeletone::before{
+    content: "";
+    position: absolute;
+    box-sizing: border-box;
+    justify-content: space-between;
+    left: 1;
+    z-index: 2;
+    margin-top: -30px;
+    min-height: 15px;
+    margin-left: 34px;
+    width: 129px;
+    border-radius: 2px;
+    background: var(--dot-skeletone-bg);
+    background-size: 400% 100%;
+    animation-name: css-skeleton-loading;
+    animation-duration: 1.4s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+}
+.price-skeletone::before{
+    content: "";
+    position: absolute;
+    box-sizing: border-box;
+    justify-content: space-between;
+    left: 1;
+    z-index: 2;
+    margin-top: -40px;
+    min-height: 15px;
+    margin-left: 9px;
+    width: 129px;
+    border-radius: 2px;
+    background: var(--dot-skeletone-bg);
+    background-size: 400% 100%;
+    animation-name: css-skeleton-loading;
+    animation-duration: 1.4s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
 }
