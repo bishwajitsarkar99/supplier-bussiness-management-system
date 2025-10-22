@@ -18,6 +18,12 @@
     --card-name-animation:textDesign 2s linear infinite alternate;
     --dot-skeletone-bg:linear-gradient(90deg, rgba(0, 0, 0, 0.06) 25%, rgba(0, 0, 0, 0.15) 37%, rgba(0, 0, 0, 0.06) 63%);
     --dot-bg:linear-gradient(90deg,#fff 23%,#fff 37%,#fff 63%);
+    --animation-positive:translateY(0px);
+    --animation-negative:translateX(-10px);
+    --animation-transparent: all 0.5s;
+    --text-shadow:0 1px 0 #ccc, 0 2px 0 #ccc, 0 6px 0 transparent, 0 10px 10px rgb(0, 0,0,0.4);
+    --paragraph-text:0 1px 0 #ccc, 0 6px 0 transparent, 0 9px 0 transparent, 0 10px 10px rgb(0, 0,0,0.4);
+    --about-transform:translateY(100px);
 }
 body{
     color: #212529;
@@ -783,4 +789,33 @@ button.button-shadow{
     animation-duration: 1.4s;
     animation-timing-function: ease;
     animation-iteration-count: infinite;
+}
+.about-head{
+    padding-left: 25px;
+    padding-bottom: 10px;
+    top: 0;
+    text-shadow: var(--head-word);
+    animation: textup 2s linear infinite;
+    transform: var(--about-transform);
+}
+@keyframes textup{
+    10%{
+        transform: var(--animation-positive);
+        transform: var(--animation-negative);
+        transition: var(--animation-transparent); 
+    }
+    100%{
+        transform: var(--animation-positive);
+        transform: var(--animation-negative);
+        transition: var(--animation-transparent2);
+    }
+}
+.about-title{
+    animation: textup 5s linear infinite;
+    transform: var(--about-transform);
+}
+.contact {
+  opacity: 5;
+  background-color: #f2f3f8;
+  background: url('/public/logo/office-contract-desk.png') no-repeat center bottom;
 }

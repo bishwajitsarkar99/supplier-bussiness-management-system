@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth md:scroll-auto">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Supplier Management</title>
+    <link rel="icon" type="image/png" href="./images/com-black-favicon.png">
+    <link rel="manifest" href="./manifest.json">
+    <link href="./css/tailwind.min.css" rel="stylesheet">
+    <link href="./css/select2.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header class=" grid-flow-row items-center gap-2 header-bg px-4 py-3 text-white">
+        <div class="grid grid-cols-2 gap-5">
+            <div class="grid grid-cols-2 gap-5 w-70 text-shadow-sm">
+                <a class="w-30 logo-skeletone-v100" href="#">
+                    <img class="avtara" src="./images/gst-logo.png" alt="gst-logo" sizes="(max-width: 640px) 50vw, (max-width: 1024px) 25vw, 12vw" style="width: 53px; height: 30px;" />
+                </a>
+                <div class="w-130">
+                    <span class="header-skeletone">
+                        <span class="text-opacity-10 text-indigo-400 dark:text-white dark:text-shadow-2xs font-semibold w-72 display_none" style="font-size: 17px;text-shadow: 0 1px 0 #ccc,0 2px 0 #ccc,0 6px 0 #0000,0 10px 20px #0006;text-transform: uppercase;line-height: 1.6;font-weight: 800;">
+                            company name
+                        </span>
+                    </span>
+                </div>
+            </div>
+            <div class="grid grid-cols-5 items-center gap-1 text-left text-shadow-sm">
+                <div class="dropdown menubar-component">
+                    <span class="top-header-menu-skeletone-v100">
+                        <a type="button" class="ps-2 cursor-pointer text-gray-700 text-opacity-10 hover:text-indigo-400 hover:transition-opacity font-medium text-base display_none" id="dropbtn">
+                            <span>Language</span>  
+                        </a>
+                    </span>
+                    <div class="dropdown-content dropdown-menu-component menu-card">
+                        <ul class="menu-btn-group">
+                            <li class="child-line-row text-gray-700 text-sm">Bangla</li>
+                            <li class="child-line-row text-gray-700 text-sm">English</li>
+                        </ul>
+                        <span class="menu-card-arrow"></span>
+                    </div>
+                </div>
+                <span class="top-header-menu-skeletone-v200">
+                    <a type="button" class="flex justify-between w-25 cursor-pointer text-gray-700 text-opacity-10 hover:text-indigo-400 hover:transition-opacity font-medium text-base display_none" href="#" id="">
+                        <span class="pt-1">
+                            <svg id="Layer_1" data-name="Layer 1" fill="gray" width="15px" height="15px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 118.04 122.88"><path d="M16.08,59.26A8,8,0,0,1,0,59.26a59,59,0,0,1,97.13-45V8a8,8,0,1,1,16.08,0V33.35a8,8,0,0,1-8,8L80.82,43.62a8,8,0,1,1-1.44-15.95l8-.73A43,43,0,0,0,16.08,59.26Zm22.77,19.6a8,8,0,0,1,1.44,16l-10.08.91A42.95,42.95,0,0,0,102,63.86a8,8,0,0,1,16.08,0A59,59,0,0,1,22.3,110v4.18a8,8,0,0,1-16.08,0V89.14h0a8,8,0,0,1,7.29-8l25.31-2.3Z"/></svg>
+                        </span>
+                        <span class="ms-1">Compare</span>
+                        <span class="inline-flex items-center justify-center w-4 h-4 text-xs font-bold text-white rounded-full bg-gray-500">5</span>
+                    </a>
+                </span>
+                <span class="top-header-menu-skeletone-v300">
+                    <a type="button" class="flex justify-between w-28 cursor-pointer text-gray-700 text-opacity-10 hover:text-indigo-400  hover:transition-opacity font-medium text-base display_none" href="#" id="">
+                        <span class="pt-1.5">
+                            <svg version="1.1" id="Layer_1" fill="none" stroke="red" stroke-width="6" width="15px" height="15px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 122.88 109.57">
+                                <g><path d="M65.46,19.57c-0.68,0.72-1.36,1.45-2.2,2.32l-2.31,2.41l-2.4-2.33c-0.71-0.69-1.43-1.4-2.13-2.09  c-7.42-7.3-13.01-12.8-24.52-12.95c-0.45-0.01-0.93,0-1.43,0.02c-6.44,0.23-12.38,2.6-16.72,6.65 c-4.28,4-7.01,9.67-7.1,16.57c-0.01,0.43,0,0.88,0.02,1.37c0.69,19.27,19.13,36.08,34.42,50.01 c2.95,2.69,5.78,5.27,8.49,7.88l11.26,10.85l14.15-14.04c2.28-2.26,4.86-4.73,7.62-7.37 c4.69-4.5,9.91-9.49,14.77-14.52c3.49-3.61,6.8-7.24,9.61-10.73c2.76-3.42,5.02-6.67,6.47-9.57 c2.38-4.76,3.13-9.52,2.62-13.97c-0.5-4.39-2.23-8.49-4.82-11.99c-2.63-3.55-6.13-6.49-10.14-8.5 C96.5,7.29,91.21,6.2,85.8,6.82C76.47,7.9,71.5,13.17,65.46,19.57L65.46,19.57z"/></g>
+                            </svg>
+                        </span>
+                        <span class="ms-1">Wisht list</span>
+                        <span class="inline-flex items-center justify-center w-4 h-4 text-xs font-bold text-white rounded-full bg-gray-500">10</span>
+                    </a>
+                </span>
+                <span class="top-header-menu-skeletone-v400">
+                    <a type="button" class="flex justify-between w-17 cursor-pointer text-gray-700 text-opacity-10 hover:text-indigo-400 hover:transition-opacity font-medium text-base display_none ps-5" href="#" id="">
+                        <span class="pt-1">
+                            <svg version="1.1" id="Layer_1" fill="none" stroke="gray" stroke-width="6" width="15px" height="15px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 122.9 107.5" style="enable-background:new 0 0 122.9 107.5" xml:space="preserve"><g><path d="M3.9,7.9C1.8,7.9,0,6.1,0,3.9C0,1.8,1.8,0,3.9,0h10.2c0.1,0,0.3,0,0.4,0c3.6,0.1,6.8,0.8,9.5,2.5c3,1.9,5.2,4.8,6.4,9.1 c0,0.1,0,0.2,0.1,0.3l1,4H119c2.2,0,3.9,1.8,3.9,3.9c0,0.4-0.1,0.8-0.2,1.2l-10.2,41.1c-0.4,1.8-2,3-3.8,3v0H44.7 c1.4,5.2,2.8,8,4.7,9.3c2.3,1.5,6.3,1.6,13,1.5h0.1v0h45.2c2.2,0,3.9,1.8,3.9,3.9c0,2.2-1.8,3.9-3.9,3.9H62.5v0 c-8.3,0.1-13.4-0.1-17.5-2.8c-4.2-2.8-6.4-7.6-8.6-16.3l0,0L23,13.9c0-0.1,0-0.1-0.1-0.2c-0.6-2.2-1.6-3.7-3-4.5 c-1.4-0.9-3.3-1.3-5.5-1.3c-0.1,0-0.2,0-0.3,0H3.9L3.9,7.9z M96,88.3c5.3,0,9.6,4.3,9.6,9.6c0,5.3-4.3,9.6-9.6,9.6 c-5.3,0-9.6-4.3-9.6-9.6C86.4,92.6,90.7,88.3,96,88.3L96,88.3z M53.9,88.3c5.3,0,9.6,4.3,9.6,9.6c0,5.3-4.3,9.6-9.6,9.6 c-5.3,0-9.6-4.3-9.6-9.6C44.3,92.6,48.6,88.3,53.9,88.3L53.9,88.3z M33.7,23.7l8.9,33.5h63.1l8.3-33.5H33.7L33.7,23.7z"/></g></svg>
+                        </span>
+                        <span class="ms-1">Card</span>
+                        <span class="inline-flex items-center justify-center w-4 h-4 text-xs font-bold text-white rounded-full bg-gray-500 p-1 ms-1">5</span>
+                    </a>
+                </span>
+                <div class="dropdown menubar-component relative group inline-block top-header-menu-skeletone-v500 ps-7">
+                    <a type="button" class="flex justify-between w-22 cursor-pointer text-gray-700 text-opacity-10 hover:text-indigo-400 hover:transition-opacity font-medium text-base display_none" href="#" id="">
+                        <span class="">
+                            <svg width="20px" height="20px" xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd" viewBox="0 0 512 512">
+                                <path fill="#A7A9AE" fill-rule="nonzero" d="M256 0c70.69 0 134.69 28.655 181.018 74.982C483.345 121.31 512 185.31 512 256s-28.655 134.69-74.982 181.018C390.69 483.345 326.69 512 256 512s-134.69-28.655-181.018-74.982C28.655 390.69 0 326.69 0 256S28.655 121.31 74.982 74.982C121.31 28.655 185.31 0 256 0zm-49.371 316.575c-.992-1.286 2.594-10.118 3.443-11.546-9.722-8.651-17.404-17.379-19.041-35.34l-1.043.022c-2.408-.032-4.729-.586-6.903-1.825-3.481-1.979-5.93-5.379-7.583-9.212-3.5-8.043-15.031-34.738 2.537-32.628-9.823-18.345 12.409-49.684-25.935-61.275 31.46-39.845 97.839-101.281 146.483-39.654 53.245 5.16 69.853 68.437 34 103.093 2.101.076 4.08.56 5.832 1.498 6.665 3.57 6.884 11.318 5.132 17.819-1.733 5.429-3.934 9.104-6.01 14.397-2.524 7.147-6.215 8.478-13.345 7.708-.362 17.67-8.528 26.343-19.518 36.724l3.007 10.187c-14.737 31.261-75.957 32.518-101.056.032zM78.752 394.224c12.076-51.533 45.656-33.396 110.338-73.867 22.982 47.952 116.386 51.437 135.54 0 55.35 35.384 98.967 20.923 109.958 72.138 28.965-37.841 46.176-85.158 46.176-136.495 0-62.068-25.158-118.26-65.83-158.934C374.26 56.394 318.068 31.236 256 31.236S137.74 56.394 97.066 97.066C56.394 137.74 31.236 193.932 31.236 256c0 52.123 17.744 100.099 47.516 138.224z"/>
+                            </svg>
+                        </span>
+                        <span>Account</span>
+                    </a>
+                    <div class="dropdown-content dropdown-menu-component menu-card">
+                        <ul class="menu-btn-group">
+                            <li class="child-line-row text-gray-700 text-sm">Create</li>
+                            <li class="child-line-row text-gray-700 text-sm">Forget Password</li>
+                        </ul>
+                        <span class="menu-acc-card-arrow"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <nav class="sticky top-0 z-50 nav-bg px-4 py-3 grid-flow-row grid grid-cols-2 items-center gap-0 text-shadow-sm border-b-0 border-gray-50">
+        <div class="flex items-center gap-1 w-140">
+            <select class="bg-white text-left text-slate-900 font-light cursor-pointer h-6 ps-2 select2" name="product_categories" id="allCategories">
+                <option value="" >All Categories</option>
+                <option value="" >Product Category1</option>
+                <option value="" >Product Category2</option>
+            </select>
+            <div class="input-wrapper">
+                <span class="fake-caret"></span>
+                <input class="caret-blue-500 border-collapse border-spacing-0 border-t-0 border-t-slate-500 text-left text-zinc-950 bg-white w-100 h-6 ps-2 input_cursor" 
+                type="text" name="" id="search" placeholder="I'm shoping for..." autocomplete="off">
+                <button class="absolute bg-indigo-500 shadow-lg shadow-indigo-400/50 transition-none text-center text-white w-20 font-bold border-r-emerald-300 border-t-white hover:bg-indigo-400 hover:text-indigo-100 hover:shadow-indigo-400/50 cursor-pointer" type="button" id="searchBtn">Search</button>
+            </div>
+        </div>
+        <div class="grid grid-cols-8 items-center text-center">
+            <span class="header-menu-skeletone">
+                <a type="button" class="cursor-pointer text-gray-700 text-opacity-10 hover:text-indigo-400 hover:transition-opacity font-medium text-base display_none" href="http://127.0.0.1:5500/index.html" id="">
+                    <span class="text-scroll">Home</span>
+                </a>
+            </span>
+            <span class="header-menu-skeletone">
+                <a type="button" class="cursor-pointer text-gray-700 text-opacity-10 hover:text-indigo-400 hover:transition-opacity font-medium text-base display_none" href="#" id="">
+                    <span class="text-scroll">Products</span>
+                </a>
+            </span>
+            <span class="header-menu-skeletone">
+                <a type="button" class="cursor-pointer text-gray-700 text-opacity-10 hover:text-indigo-400 hover:transition-opacity font-medium text-base display_none" href="#" id="">
+                    <span class="text-scroll">About Us</span>
+                </a>
+            </span>
+            <span class="header-menu-skeletone">
+                <a type="button" class="cursor-pointer text-gray-700 text-opacity-10 hover:text-indigo-400 hover:transition-opacity font-medium text-base display_none" href="http://127.0.0.1:5500/blog-post.html" id="">
+                    <span class="text-scroll">Blog</span>
+                </a>
+            </span>
+            <span class="header-menu-skeletone">
+                <a type="button" class="cursor-pointer text-gray-700 text-opacity-10 hover:text-indigo-400 hover:transition-opacity font-medium text-base display_none" href="#" id="">
+                    <span class="text-scroll">Testimonial</span>
+                </a>
+            </span>
+            <span class="header-menu-skeletone">
+                <a type="button" class="cursor-pointer text-gray-700 text-opacity-10 hover:text-indigo-400 hover:transition-opacity font-medium text-base display_none" href="#" id="">
+                    <span class="text-scroll">FAQ</span>
+                </a>
+            </span>
+            <span class="header-menu-skeletone">
+                <a type="button" class="cursor-pointer text-gray-700 text-opacity-10 hover:text-indigo-400 hover:transition-opacity font-medium text-base display_none" href="#" id="">
+                    <span class="text-scroll">Service</span>
+                </a>
+            </span>
+            <span class="header-menu-skeletone">
+                <a type="button" class="cursor-pointer text-gray-700 text-opacity-10 hover:text-indigo-400 hover:transition-opacity font-medium text-base display_none" href="http://127.0.0.1:5500/contract-info.html" id="">
+                    <span class="text-scroll">Contract</span>
+                </a>
+            </span>
+        </div>
+    </nav>
+    <section class="px-10 py-10">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-8 transform-3d">
+            <div class="md:col-span-12">
+                <div class="relative h-64 md:h-[26rem] overflow-hidden rounded-lg">
+                    <div class="blog-img left_svg_doted left-doted-skeletone">
+                        <div class="">
+                            <img src="./images/office-contract-desk.png" class="absolute w-full h-full " alt="Slide 1">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class='google--map'>
+        <div class='current--location ps-10 pb-10'>
+            <div class="left-doted-skeletone">
+                <div class='side__text location--part'>
+                    <h1 class="text-xl font-semibold text-gray-600">Company Name</h1>
+                    <span class="text-lg font-semibold text-gray-600">Company Address........</span>
+                </div>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3648.617951418238!2d90.38652287410459!3d23.867696584265456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c52508392dd9%3A0xb4ca29290ae07ede!2sUttara%20%2CSector%2014%2C%20Road%2016%2C%20House%2040!5e0!3m2!1sbn!2sbd!4v1705776713912!5m2!1sbn!2sbd" 
+                    width="1260" height="450"allowfullscreen="" loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </section>
+    <!-- =========== Footer Part ============== -->
+    <footer class="background">
+        <div class="grid grid-col-1 md:grid-cols-12 gap-2 px-8 py-8">
+            <div class="col-span-12 flex flex-row">
+                <span class="text-indigo-200 dark:text-white dark:text-shadow-2xs font-semibold text-lg uppercase pt-2">
+                    News-Letter
+                </span>
+                <div class="input-wrapper">
+                    <span class="fake-caret ms-1"></span>
+                    <input type="text" class="caret-blue-500 text-left text-gray-700 font-semibold text-base bg-white outline-none shadow-none w-100 h-10 rounded-tl-md rounded-bl-md input_cursor ps-2 ms-2" placeholder="Your Email Address..." id="subMitNewLetter" autocomplete="off">
+                </div>
+                <button type="button" class="text-white bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-base px-5 py-1.5 text-center me-2 cursor-pointer rounded-tl-none rounded-bl-none outline-none button-shadow" id="subcribe">Subscribe</button>
+            </div>
+        </div>
+        <div class="grid grid-col-1 md:grid-cols-12 grap-2 px-5 py-5">
+            <div class="flex flex-col md:col-span-3 mx-3 px-2 py-2 bg-transparent rounded-s-sm rounded-r-sm shadow-lg border border-gray-700 pb-2 card-scroll transform-3d footer-doted-skeletone">
+                <span class="text-md text-left font-semibold text-indigo-200 dark:text-white dark:text-shadow-2xs shadow-sm uppercase ps-2 mb-2">Company Information</span>
+                <span class="text-indigo-100 dark:text-white dark:text-shadow-2xs text-left text-sm font-normal transition-opacity ps-2">Company Name</span>
+                <span class="text-indigo-100 dark:text-white dark:text-shadow-2xs text-left text-sm font-normal transition-opacity ps-2">
+                    Address : <span>..........</span>
+                </span>
+                <span class="text-indigo-100 dark:text-white dark:text-shadow-2xs text-left text-sm font-normal transition-opacity ps-2">
+                    Contract-Number : <span>..........</span>
+                </span>
+                <span class="text-indigo-100 dark:text-white dark:text-shadow-2xs text-left text-sm font-normal transition-opacity ps-2">
+                    What's app-Number : <span>..........</span>
+                </span>
+                <span class="text-indigo-100 dark:text-white dark:text-shadow-2xs text-left text-sm font-normal transition-opacity ps-2">
+                    Email : <span>..........</span>
+                </span>
+                <span class="text-indigo-100 dark:text-white dark:text-shadow-2xs text-left text-sm font-normal transition-opacity ps-2">
+                    Linkedin : <span>..........</span>
+                </span>
+            </div>
+            <div class="flex flex-col md:col-span-3 mx-3 px-2 py-2 bg-transparent rounded-s-sm rounded-r-sm shadow-lg border border-gray-600 pb-2 card-scroll transform-3d footer-doted-skeletone">
+                <span class="text-md text-left font-semibold text-indigo-200 dark:text-white dark:text-shadow-2xs shadow-sm uppercase ps-2 mb-2">Helpfull Links</span>
+                <a type="button" href="#" class="text-indigo-100 dark:text-white dark:text-shadow-2xs text-left text-sm font-normal hover:text-indigo-300 transition-opacity ps-2">
+                    ➤ About-us
+                </a>
+                <a type="button" href="#" class="text-indigo-100 dark:text-white dark:text-shadow-2xs text-left text-sm font-normal hover:text-indigo-300 transition-opacity ps-2">
+                    ➤ Contract-us
+                </a>
+                <a type="button" href="#" class="text-indigo-100 dark:text-white dark:text-shadow-2xs text-left text-sm font-normal hover:text-indigo-300 transition-opacity ps-2">
+                    ➤ Customer Satisfy
+                </a>
+                <a type="button" href="#" class="text-indigo-100 dark:text-white dark:text-shadow-2xs text-left text-sm font-normal hover:text-indigo-300 transition-opacity ps-2">
+                    ➤ Testimonial
+                </a>
+            </div>
+            <div class="flex flex-col md:col-span-3 mx-3 px-2 py-2 bg-transparent rounded-s-sm rounded-r-sm shadow-lg border border-gray-600 pb-2 card-scroll transform-3d footer-doted-skeletone">
+                <span class="text-md text-left font-semibold text-indigo-200 dark:text-white dark:text-shadow-2xs shadow-sm uppercase ps-2 mb-2">Bussiness Reference</span>
+                <a type="button" href="#" class="text-indigo-100 dark:text-white dark:text-shadow-2xs text-left text-sm font-normal hover:text-indigo-300 transition-opacity ps-2">
+                    ➤ Releative another bussiness link-01
+                </a>
+                <a type="button" href="#" class="text-indigo-100 dark:text-white dark:text-shadow-2xs text-left text-sm font-normal hover:text-indigo-300 transition-opacity ps-2">
+                    ➤ Releative another bussiness link-02
+                </a>
+                <a type="button" href="#" class="text-indigo-100 dark:text-white dark:text-shadow-2xs text-left text-sm font-normal hover:text-indigo-300 transition-opacity ps-2">
+                    ➤ Releative another bussiness link-03
+                </a>
+                <a type="button" href="#" class="text-indigo-100 dark:text-white dark:text-shadow-2xs text-left text-sm font-normal hover:text-indigo-300 transition-opacity ps-2">
+                    ➤ Releative another bussiness link-04
+                </a>
+            </div>
+            <div class="flex flex-col md:col-span-3 mx-3 px-2 py-2 bg-transparent rounded-s-sm rounded-r-sm shadow-lg border border-gray-700 pb-2 card-scroll transform-3d footer-doted-skeletone">
+                <span class="text-md text-left font-semibold text-indigo-200 dark:text-white dark:text-shadow-2xs shadow-sm uppercase ps-2 mb-2">Social Media</span>
+                <div class="flex flex-row justify-evenly pt-5">
+                    <span class="media_group transform-3d">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="40px" width="40px" version="1.1" id="Layer_1" viewBox="0 0 474.294 474.294" xml:space="preserve">
+                        <circle style="fill:#3A5A98;" cx="237.111" cy="236.966" r="236.966"/>
+                        <path style="fill:#345387;" d="M404.742,69.754c92.541,92.541,92.545,242.586-0.004,335.134  c-92.545,92.541-242.593,92.541-335.134,0L404.742,69.754z"/>
+                        <path style="fill:#2E4D72;" d="M472.543,263.656L301.129,92.238l-88.998,88.998l5.302,5.302l-50.671,50.667l41.474,41.474  l-5.455,5.452l44.901,44.901l-51.764,51.764l88.429,88.429C384.065,449.045,461.037,366.255,472.543,263.656z"/>
+                        <path style="fill:#FFFFFF;" d="M195.682,148.937c0,7.27,0,39.741,0,39.741h-29.115v48.598h29.115v144.402h59.808V237.276h40.134  c0,0,3.76-23.307,5.579-48.781c-5.224,0-45.485,0-45.485,0s0-28.276,0-33.231c0-4.962,6.518-11.641,12.965-11.641  c6.436,0,20.015,0,32.587,0c0-6.623,0-29.481,0-50.592c-16.786,0-35.883,0-44.306,0C194.201,93.028,195.682,141.671,195.682,148.937  z"/>
+                        </svg>
+                    </span>
+                    <span class="media_group transform-3d">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="40px" width="40px" version="1.1" id="Layer_1" viewBox="0 0 473.931 473.931" xml:space="preserve">
+                        <circle style="fill:#4A86C5;" cx="236.966" cy="236.966" r="236.966"/>
+                        <path style="fill:#3D80B2;" d="M404.518,69.383c92.541,92.549,92.549,242.59,0,335.138c-92.541,92.541-242.593,92.541-335.134,0  L404.518,69.383z"/>
+                        <path style="fill:#4A86C5;" d="M462.646,309.275c0.868-2.713,1.658-5.456,2.432-8.206  C464.307,303.823,463.496,306.562,462.646,309.275z"/>
+                        <g>
+                            <polygon style="fill:#377CA5;" points="465.097,301.017 465.097,301.017 465.082,301.07  "/>
+                            <path style="fill:#377CA5;" d="M465.097,301.017L336.721,172.641l-29.204,29.204l-20.303-20.303l-16.946,16.946L171.032,99.25   l-6.155-2.346l-38.08,38.08l45.968,45.964l-44.998,44.995l43.943,43.943l-48.048,48.052L276.475,470.59   c87.984-14.78,159.5-77.993,186.175-161.311c0.849-2.716,1.658-5.452,2.432-8.206C465.082,301.055,465.09,301.032,465.097,301.017z   "/>
+                        </g>
+                        <path style="fill:#FFFFFF;" d="M358.565,230.459v87.883h-50.944v-81.997c0-20.595-7.375-34.656-25.811-34.656  c-14.084,0-22.458,9.474-26.147,18.634c-1.343,3.278-1.688,7.835-1.688,12.423v85.593H203.02c0,0,0.681-138.875,0-153.259h50.952  V186.8c-0.094,0.161-0.236,0.34-0.329,0.498h0.329V186.8c6.769-10.425,18.862-25.324,45.923-25.324  C333.432,161.479,358.565,183.384,358.565,230.459z M149.7,91.198c-17.429,0-28.838,11.439-28.838,26.473  c0,14.716,11.072,26.495,28.164,26.495h0.344c17.766,0,28.823-11.779,28.823-26.495C177.857,102.636,167.137,91.198,149.7,91.198z   M123.886,318.341h50.944V165.083h-50.944V318.341z"/>
+                        </svg>
+                    </span>
+                    <span class="media_group transform-3d">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40px" height="40px" viewBox="-1 0 226 226" version="1.1">
+                            <defs>
+                            <linearGradient id="a" y1="6.76%" x2="50%" x1="50%" y2="95.6%">
+                            <stop stop-color="#00C6FF" offset="0"/>
+                            <stop stop-color="#0068FF" offset="1"/>
+                            </linearGradient>
+                            </defs>
+                            <path fill="url(#a)" d="m41.255 185.52v40.2l37.589-21.37c10.478 3.02 21.616 4.65 33.156 4.65 61.86 0 112-46.79 112-104.5 0-57.714-50.14-104.5-112-104.5-61.856 0-112 46.786-112 104.5 0 32.68 16.078 61.86 41.255 81.02z"/>
+                            <path fill="#ffffff" d="m100.04 75.878l-60.401 63.952 54.97-30.16 28.721 30.16 60.06-63.952-54.36 29.632-28.99-29.632z"/>
+                        </svg>
+                    </span>
+                    <span class="media_group transform-3d">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40px" height="40px" viewBox="126.444 2.281 589 589"><circle cx="420.944" cy="296.781" r="294.5" fill="#2daae1"/><path d="M609.773 179.634c-13.891 6.164-28.811 10.331-44.498 12.204 16.01-9.587 28.275-24.779 34.066-42.86a154.78 154.78 0 0 1-49.209 18.801c-14.125-15.056-34.267-24.456-56.551-24.456-42.773 0-77.462 34.675-77.462 77.473 0 6.064.683 11.98 1.996 17.66-64.389-3.236-121.474-34.079-159.684-80.945-6.672 11.446-10.491 24.754-10.491 38.953 0 26.875 13.679 50.587 34.464 64.477a77.122 77.122 0 0 1-35.097-9.686v.979c0 37.54 26.701 68.842 62.145 75.961-6.511 1.784-13.344 2.716-20.413 2.716-4.998 0-9.847-.473-14.584-1.364 9.859 30.769 38.471 53.166 72.363 53.799-26.515 20.785-59.925 33.175-96.212 33.175-6.25 0-12.427-.373-18.491-1.104 34.291 21.988 75.006 34.824 118.759 34.824 142.496 0 220.428-118.052 220.428-220.428 0-3.361-.074-6.697-.236-10.021a157.855 157.855 0 0 0 38.707-40.158z" fill="#ffffff"/></svg>
+                    </span>
+                    <span class="media_group transform-3d">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="40px" width="40px" viewBox="0 0 461.001 461.001">
+                            <g>
+                                <!-- Red background -->
+                                <path fill="#F61C0D" d="M365.257,67.393H95.744C42.866,67.393,0,110.259,0,163.137v134.728c0,52.878,42.866,95.744,95.744,95.744h269.513
+                                c52.878,0,95.744-42.866,95.744-95.744V163.137C461.001,110.259,418.135,67.393,365.257,67.393z"/>
+                                
+                                <!-- White play arrow -->
+                                <path fill="#FFFFFF" d="M300.506,237.056l-126.06,60.123c-3.359,1.602-7.239-0.847-7.239-4.568V168.607
+                                c0-3.774,3.982-6.22,7.348-4.514l126.06,63.881C304.363,229.873,304.298,235.248,300.506,237.056z"/>
+                            </g>
+                        </svg>
+                    </span>
+                </div>
+            </div>
+        </div> 
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
+    <script type="module">
+        import { customCursor } from "./design-module.js";
+
+        customCursor('.input_cursor', '.fake-caret');
+
+        $(window).on('scroll', function() {
+            let scrollPos = $(window).scrollTop();
+            const $header = $('.nav-bg');
+            const $text = $('.text-scroll');
+            const $card = $('.card-scroll');
+
+            $('section').each(function() {
+                let sectionTop = $(this).offset().top - 100;
+                let sectionBottom = sectionTop + $(this).outerHeight();
+
+                // When the scroll position is inside this section
+                if (scrollPos >= sectionTop && scrollPos < sectionBottom) {
+
+                    // 👇 Your scroll distance check inside this section
+                    if (scrollPos > sectionTop + 50) {
+                        $header.addClass('scrolled');
+                        $text.addClass('text-scrolled');
+                        $card.addClass('card-focus');
+                    }else if (scrollPos > sectionTop + 80 ){
+                        $card.addClass('card-focus');
+                    } else {
+                        $header.removeClass('scrolled');
+                        $text.removeClass('text-scrolled');
+                        $card.removeClass('card-focus');
+                    }
+
+                }
+            });
+        });
+
+        // skeleton
+        function skeletone() {
+            const allSkeleton = document.querySelectorAll('.header-menu-skeletone')
+
+            allSkeleton.forEach(item => {
+                item.classList.remove('header-menu-skeletone')
+            });
+        }
+        // head skeletone
+        function headSkeletne(){
+            const allSkeleton = document.querySelectorAll('.header-skeletone');
+
+            allSkeleton.forEach(item => {
+                item.classList.remove('header-skeletone');
+            });
+        }
+
+        // head skeletone
+        function headSkeletnes() {
+            const skeletonClasses = [
+                'top-header-menu-skeletone-v100',
+                'top-header-menu-skeletone-v200',
+                'top-header-menu-skeletone-v300',
+                'top-header-menu-skeletone-v400',
+                'top-header-menu-skeletone-v500',
+                'doted-skeletone',
+                'rating-skeletone',
+                'card-title-skeletone',
+                'price-skeletone',
+                'popular-rating-skeletone',
+                'popular-brand-rating-skeletone',
+                'left-doted-skeletone',
+                'footer-doted-skeletone'
+            ];
+
+            const allSkeleton = document.querySelectorAll(
+                skeletonClasses.map(cls => `.${cls}`).join(',')
+            );
+
+            allSkeleton.forEach(item => {
+                skeletonClasses.forEach(cls => item.classList.remove(cls));
+            });
+        }
+
+        // logo skeletone
+        function logoSkeletone(){
+            const allSkeleton = document.querySelectorAll('.logo-skeletone-v100');
+            allSkeleton.forEach(item => {
+                item.classList.remove('logo-skeletone-v100');
+            });
+        }
+
+        // return
+        function returnOrigin(){
+            const origin = document.querySelectorAll('.display_none');
+            origin.forEach(item => {
+                item.classList.remove('display_none');
+            });
+        }
+        $(".svg_doted").removeClass('display_none');
+        $(".popular_svg_doted").removeClass('display_none');
+        $(".product__category__box").removeClass('card-focus');
+
+        setTimeout(() => {
+            skeletone();
+            logoSkeletone();
+            headSkeletnes();
+            headSkeletne();
+            returnOrigin();
+            $(".blog-img").removeClass('left_svg_doted');
+            $(".svg_doted").addClass('display_none');
+            $(".product__category__box").addClass('card-focus');
+            $(".popular_svg_doted").addClass('display_none');
+        }, 5000);
+
+        $(document).ready(function(){
+            $(".select2").each(function(){
+                // Check the ID or name to set specific options
+                if ($(this).attr('id') === 'allCategories') {
+                    $(this).select2({
+                        placeholder: 'All Categories',
+                        allowClear: true,
+                        width: '100%'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
