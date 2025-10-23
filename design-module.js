@@ -48,3 +48,37 @@ export function customCursor(inputClass, cursorClass) {
         });
     });
 }
+
+// hoverWeave.js
+export function hoverWeaveEffect(selector, intensity = 20, speed = 0.2) {
+  const elements = document.querySelectorAll(selector);
+
+  elements.forEach(el => {
+    el.style.transition = `transform ${speed}s ease-out, box-shadow ${speed}s ease-out`;
+    el.style.willChange = 'transform, box-shadow';
+    el.style.transformOrigin = 'center center';
+
+    el.addEventListener('mousemove', (e) => {
+      const rect = el.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      const centerX = rect.width / 2;
+      const centerY = rect.height / 2;
+      const moveX = ((x - centerX) / centerX) * intensity;
+      const moveY = ((y - centerY) / centerY) * intensity;
+
+      el.style.transform = `
+        translate(${moveX / 2}px, ${moveY / 2}px)
+        rotateX(${moveY / 3}deg)
+        rotateY(${-moveX / 3}deg)
+        scale(1.1)
+      `;
+      el.style.boxShadow = `${-moveX / 2}px ${moveY / 2}px 30px rgba(0,0,0,0.25)`;
+    });
+
+    el.addEventListener('mouseleave', () => {
+      el.style.transform = 'translate(0,0) rotateX(0) rotateY(0) scale(1)';
+      el.style.boxShadow = '0 0 20px rgba(0,0,0,0.1)';
+    });
+  });
+}

@@ -155,8 +155,30 @@
             <div class="md:col-span-12">
                 <div class="relative h-64 md:h-[26rem] overflow-hidden rounded-lg">
                     <div class="blog-img left_svg_doted left-doted-skeletone">
-                        <div class="">
-                            <img src="./images/left-slider-images/slider-image-06.png" class="absolute w-full h-full " alt="Slide 1">
+                        <div class="font-extrabold text-5xl text-center text-indigo-500 size-8/8 h-50 about-head">
+                            Best Textile & Fabric Machinery Products
+                        </div>
+                        <blockquote class="bg-lime-50 text-xl italic font-semibold text-green-700 dark:text-white p-5">
+                            <p>Your Choice Products</p>
+                        </blockquote>
+                        <div class="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-[hsl(0,0%,98.4%,0.2)] bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100">
+                            <div class="sub-scroll-slider-container">
+                                <img class="cursor-cell weave-img" src="./images/left-slider-images/slider-img-01.png" alt="Bottom Slide 1">
+                                <img class="cursor-cell weave-img" src="./images/left-slider-images/slider-image-02.png" alt="Bottom Slide 2">
+                                <img class="cursor-cell weave-img" src="./images/left-slider-images/slider-image-03.png" alt="Bottom Slide 3">
+                                <img class="cursor-cell weave-img" src="./images/left-slider-images/slider-image-04.png" alt="Bottom Slide 4">
+                                <img class="cursor-cell weave-img" src="./images/left-slider-images/slider-image-05.png" alt="Bottom Slide 5">
+                                <img class="cursor-cell weave-img" src="./images/left-slider-images/slider-image-06.png" alt="Bottom Slide 6">
+    
+                                <!-- Duplicate images for seamless loop -->
+                                <img class="cursor-cell weave-img" src="./images/left-slider-images/slider-img-01.png" alt="Bottom Slide 1">
+                                <img class="cursor-cell weave-img" src="./images/left-slider-images/slider-image-02.png" alt="Bottom Slide 2">
+                                <img class="cursor-cell weave-img" src="./images/left-slider-images/slider-image-03.png" alt="Bottom Slide 3">
+                                <img class="cursor-cell weave-img" src="./images/left-slider-images/slider-image-04.png" alt="Bottom Slide 4">
+                                <img class="cursor-cell weave-img" src="./images/left-slider-images/slider-image-05.png" alt="Bottom Slide 5">
+                                <img class="cursor-cell weave-img" src="./images/left-slider-images/slider-image-06.png" alt="Bottom Slide 6">
+                            </div>
+                            <img src="./images/left-slider-images/slider-image-06.png" class="absolute cursor-cell weave-img w-full h-60 mt-3" alt="Slide 1">
                         </div>
                     </div>
                 </div>
@@ -492,9 +514,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
     <script type="module">
-        import { customCursor } from "./design-module.js";
+        import { customCursor, hoverWeaveEffect } from "./design-module.js";
 
         customCursor('.input_cursor', '.fake-caret');
+        // Apply effect to all images with `.weave-img` class
+        hoverWeaveEffect('.weave-img', 25, 0.3);
 
         $(window).on('scroll', function() {
             let scrollPos = $(window).scrollTop();

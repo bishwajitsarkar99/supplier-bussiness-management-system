@@ -9,7 +9,7 @@
     <title>Supplier Management</title>
     <link rel="icon" type="image/png" href="./images/com-black-favicon.png">
     <link rel="manifest" href="./manifest.json">
-    <link href="./css/tailwind.min.css" rel="stylesheet">
+    <link href="./css/tailwind.css" rel="stylesheet">
     <link href="./css/select2.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -109,42 +109,42 @@
         </div>
         <div class="grid grid-cols-8 items-center text-center">
             <span class="header-menu-skeletone">
-                <a type="button" class="cursor-pointer text-gray-700 text-opacity-10 hover:text-indigo-400 hover:transition-opacity font-medium text-base display_none" href="http://127.0.0.1:5500/index.html" id="">
+                <a type="button" class="cursor-pointer text-gray-700 text-opacity-10 hover:text-indigo-400 hover:transition-opacity font-medium text-base display_none" href="#home" id="">
                     <span class="text-scroll">Home</span>
                 </a>
             </span>
             <span class="header-menu-skeletone">
-                <a type="button" class="cursor-pointer text-gray-700 text-opacity-10 hover:text-indigo-400 hover:transition-opacity font-medium text-base display_none" href="#" id="">
+                <a type="button" class="cursor-pointer text-gray-700 text-opacity-10 hover:text-indigo-400 hover:transition-opacity font-medium text-base display_none" href="#product">
                     <span class="text-scroll">Products</span>
                 </a>
             </span>
             <span class="header-menu-skeletone">
-                <a type="button" class="cursor-pointer text-gray-700 text-opacity-10 hover:text-indigo-400 hover:transition-opacity font-medium text-base display_none" href="#" id="">
+                <a type="button" class="cursor-pointer text-gray-700 text-opacity-10 hover:text-indigo-400 hover:transition-opacity font-medium text-base display_none" href="#">
                     <span class="text-scroll">About Us</span>
                 </a>
             </span>
             <span class="header-menu-skeletone">
-                <a type="button" class="cursor-pointer text-gray-700 text-opacity-10 hover:text-indigo-400 hover:transition-opacity font-medium text-base display_none" href="http://127.0.0.1:5500/blog-post.html" id="">
+                <a type="button" class="cursor-pointer text-gray-700 text-opacity-10 hover:text-indigo-400 hover:transition-opacity font-medium text-base display_none" href="http://127.0.0.1:5500/blog-post.html">
                     <span class="text-scroll">Blog</span>
                 </a>
             </span>
             <span class="header-menu-skeletone">
-                <a type="button" class="cursor-pointer text-gray-700 text-opacity-10 hover:text-indigo-400 hover:transition-opacity font-medium text-base display_none" href="#" id="">
+                <a type="button" class="cursor-pointer text-gray-700 text-opacity-10 hover:text-indigo-400 hover:transition-opacity font-medium text-base display_none" href="#">
                     <span class="text-scroll">Testimonial</span>
                 </a>
             </span>
             <span class="header-menu-skeletone">
-                <a type="button" class="cursor-pointer text-gray-700 text-opacity-10 hover:text-indigo-400 hover:transition-opacity font-medium text-base display_none" href="#" id="">
+                <a type="button" class="cursor-pointer text-gray-700 text-opacity-10 hover:text-indigo-400 hover:transition-opacity font-medium text-base display_none" href="#">
                     <span class="text-scroll">FAQ</span>
                 </a>
             </span>
             <span class="header-menu-skeletone">
-                <a type="button" class="cursor-pointer text-gray-700 text-opacity-10 hover:text-indigo-400 hover:transition-opacity font-medium text-base display_none" href="#" id="">
+                <a type="button" class="cursor-pointer text-gray-700 text-opacity-10 hover:text-indigo-400 hover:transition-opacity font-medium text-base display_none" href="#">
                     <span class="text-scroll">Service</span>
                 </a>
             </span>
             <span class="header-menu-skeletone">
-                <a type="button" class="cursor-pointer text-gray-700 text-opacity-10 hover:text-indigo-400 hover:transition-opacity font-medium text-base display_none" href="http://127.0.0.1:5500/contract-info.html" id="">
+                <a type="button" class="cursor-pointer text-gray-700 text-opacity-10 hover:text-indigo-400 hover:transition-opacity font-medium text-base display_none" href="http://127.0.0.1:5500/contract-info.html">
                     <span class="text-scroll">Contract</span>
                 </a>
             </span>
@@ -152,8 +152,8 @@
     </nav>
     <main>
         <!-- =========== Slider-part ============== -->
-        <section class="px-10 py-10">
-            <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+        <section class="px-10 py-15" id="home">
+            <div class="relative grid grid-cols-1 md:grid-cols-12 gap-8">
                 <!-- ===== Left Large Carousel ===== -->
                 <div class="md:col-span-8">
                     <div id="left-carousel" class="relative w-full h-full" data-carousel="slide">
@@ -161,27 +161,27 @@
                             <div class="left_svg_doted left-doted-skeletone"></div>
                             <div class="duration-700 ease-in-out transform-3d display_none" data-carousel-item="active">
                                 <img src="./images/left-slider-images/slider-img-01.png"
-                                class="absolute block w-full h-full object-cover top-0 left-0" alt="Slide 1">
+                                class="absolute block weave-img w-full h-full object-cover top-0 left-0" alt="Slide 1">
                             </div>
                             <div class="hidden duration-700 ease-in-out transform-3d display_none" data-carousel-item>
                                 <img src="./images/left-slider-images/slider-image-02.png"
-                                class="absolute block w-full h-full object-cover top-0 left-0" alt="Slide 2">
+                                class="absolute block weave-img w-full h-full object-cover top-0 left-0" alt="Slide 2">
                             </div>
                             <div class="hidden duration-700 ease-in-out transform-3d display_none" data-carousel-item>
                                 <img src="./images/left-slider-images/slider-image-03.png"
-                                class="absolute block w-full h-full object-cover top-0 left-0" alt="Slide 3">
+                                class="absolute block weave-img w-full h-full object-cover top-0 left-0" alt="Slide 3">
                             </div>
                             <div class="hidden duration-700 ease-in-out transform-3d display_none" data-carousel-item>
                                 <img src="./images/left-slider-images/slider-image-04.png"
-                                class="absolute block w-full h-full object-cover top-0 left-0" alt="Slide 3">
+                                class="absolute block weave-img w-full h-full object-cover top-0 left-0" alt="Slide 3">
                             </div>
                             <div class="hidden duration-700 ease-in-out transform-3d display_none" data-carousel-item>
                                 <img src="./images/left-slider-images/slider-image-05.png"
-                                class="absolute block w-full h-full object-cover top-0 left-0" alt="Slide 3">
+                                class="absolute block weave-img w-full h-full object-cover top-0 left-0" alt="Slide 3">
                             </div>
                             <div class="hidden duration-700 ease-in-out transform-3d display_none" data-carousel-item>
                                 <img src="./images/left-slider-images/slider-image-06.png"
-                                class="absolute block w-full h-full object-cover top-0 left-0" alt="Slide 3">
+                                class="absolute block weave-img w-full h-full object-cover top-0 left-0" alt="Slide 3">
                             </div>
                         </div>
                         <!-- Controls -->
@@ -271,9 +271,9 @@
             </div>
         </section>
         <!-- =========== Home Page Product Display ============== -->
-        <section class="px-30 py-10">
-            <div class="w-full p-2 text-center bg-white border border-gray-200 rounded-lg shadow-none sm:p-8 dark:bg-gray-800 dark:border-gray-700">
-                <!-- =========== category Features ============== -->
+        <section class="px-30 py-10 my-5" id="product">
+            <!-- =========== category Features ============== -->
+            <div class="w-full text-center bg-white border border-gray-200 rounded-lg shadow-none sm:p-8 dark:bg-gray-800 dark:border-gray-700">
                 <ul class="flex flex-wrap justify-between px-2 text-xs font-medium text-left text-gray-500 border-b border-gray-200 rounded-t-lg dark:border-gray-700 dark:text-gray-400 dark:bg-gray-800" id="defaultTab" data-tabs-toggle="#defaultTabContent" role="tablist">
                     <li class="h-8 me-2 line-height text-left font-semibold">
                         <span class="inline-block text-gray-700 rounded-ss-lg dark:bg-gray-800 dark:hover:bg-gray-700 dark:text-blue-500">Category Features</span>
@@ -285,6 +285,24 @@
                 <div class="items-center justify-center space-y-4 sm:flex sm:space-y-0 sm:space-x-4 rtl:space-x-reverse mb-5">
                     <div class="grid grid-col-1 md:grid-cols-12 mt-4 mb-1" id="categoryCard"></div>
                 </div>
+            </div>
+        </section>
+        <section class="px-30 py-10 my-5" id="new_product">
+            <!-- =========== New Product ============== -->
+            <div class="w-full p-2 mt-12 text-center bg-white border border-gray-200 rounded-lg shadow-none sm:p-8 dark:bg-gray-800 dark:border-gray-700">
+                <ul class="flex flex-wrap justify-between px-2 text-xs font-medium text-left text-gray-500 border-b border-gray-200 rounded-t-lg dark:border-gray-700 dark:text-gray-400 dark:bg-gray-800" id="defaultTab" data-tabs-toggle="#defaultTabContent" role="tablist">
+                    <li class="h-8 me-2 line-height text-left font-semibold">
+                        <span class="inline-block text-gray-700 rounded-ss-lg dark:bg-gray-800 dark:hover:bg-gray-700 dark:text-blue-500">New Product</span>
+                    </li>
+                    <li class="h-8">
+                        <button type="button" class="button-shadow text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-1.5 text-center cursor-pointer">View New Products</button>
+                    </li>
+                </ul>
+                <div class="items-center justify-center space-y-4 sm:flex sm:space-y-0 sm:space-x-4 rtl:space-x-reverse">
+                    <div class="grid grid-col-1 md:grid-cols-12 mt-4 mb-1" id="newProduct"></div>
+                </div>
+            </div>
+            <div class="w-full p-2 mt-12 text-center bg-white border border-gray-200 rounded-lg shadow-none sm:p-8 dark:bg-gray-800 dark:border-gray-700">
                 <!-- =========== Product Features ============== -->
                 <ul class="flex flex-wrap justify-between px-2 text-xs font-medium text-left text-gray-500 border-b border-gray-200 rounded-t-lg dark:border-gray-700 dark:text-gray-400 dark:bg-gray-800" id="defaultTab" data-tabs-toggle="#defaultTabContent" role="tablist">
                     <li class="h-8 me-2 line-height text-left font-semibold">
@@ -296,18 +314,6 @@
                 </ul>
                 <div class="items-center justify-center space-y-4 sm:flex sm:space-y-0 sm:space-x-4 rtl:space-x-reverse mb-5">
                     <div class="grid grid-col-1 md:grid-cols-12 mt-4 mb-1" id="productCard"></div>
-                </div>
-                <!-- =========== New Product ============== -->
-                <ul class="flex flex-wrap justify-between px-2 text-xs font-medium text-left text-gray-500 border-b border-gray-200 rounded-t-lg dark:border-gray-700 dark:text-gray-400 dark:bg-gray-800" id="defaultTab" data-tabs-toggle="#defaultTabContent" role="tablist">
-                    <li class="h-8 me-2 line-height text-left font-semibold">
-                        <span class="inline-block text-gray-700 rounded-ss-lg dark:bg-gray-800 dark:hover:bg-gray-700 dark:text-blue-500">New Product</span>
-                    </li>
-                    <li class="h-8">
-                        <button type="button" class="button-shadow text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-1.5 text-center cursor-pointer">View New Products</button>
-                    </li>
-                </ul>
-                <div class="items-center justify-center space-y-4 sm:flex sm:space-y-0 sm:space-x-4 rtl:space-x-reverse">
-                    <div class="grid grid-col-1 md:grid-cols-12 mt-4 mb-1" id="newProduct"></div>
                 </div>
             </div>
             <!-- =========== Best Selling ============== -->
@@ -385,9 +391,10 @@
     </main>
     <!-- =========== Footer Part ============== -->
     <footer class="background">
-        <div class="grid grid-col-1 md:grid-cols-12 gap-2 px-8 py-8">
+        <img class="absolute w-full h-130 overflow-hidden" src="./images/office-background.jpg" alt="background-imgage">
+        <div class="relative grid grid-col-1 md:grid-cols-12 gap-2 px-8 py-8">
             <div class="col-span-12 flex flex-row">
-                <span class="text-indigo-200 dark:text-white dark:text-shadow-2xs font-semibold text-lg uppercase pt-2">
+                <span class="text-gray-100 dark:text-white dark:text-shadow-2xs font-semibold text-lg uppercase pt-2">
                     News-Letter
                 </span>
                 <div class="input-wrapper">
@@ -397,10 +404,10 @@
                 <button type="button" class="text-white bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-base px-5 py-1.5 text-center me-2 cursor-pointer rounded-tl-none rounded-bl-none outline-none button-shadow" id="subcribe">Subscribe</button>
             </div>
         </div>
-        <!-- <div class="grid grid-col-1 md:grid-cols-12 grap-2 px-5">
+        <div class="relative grid grid-col-1 md:grid-cols-12 grap-2 px-5">
             <div class="col-span-6"></div>
             <div class="col-span-6 flex flex-row">
-                <span class="pt-6 text-opacity-10 font-bold text-3xl italic text-indigo-200 dark:text-white dark:text-shadow-2xs" style="text-shadow: 0 1px 0 #ccc,0 2px 0 #ccc,0 6px 0 #0000,0 10px 20px #0006;">
+                <span class="pt-6 text-opacity-10 font-bold text-3xl italic text-indigo-900 dark:text-white dark:text-shadow-2xs" style="text-shadow: 0 1px 0 #ccc,0 2px 0 #ccc,0 6px 0 #0000,0 10px 20px #0006;">
                     Payments
                 </span>
                 <span class="flex justify-evenly bg-white rounded-sm shadow-sm ms-1">
@@ -479,9 +486,9 @@
                     </a>
                 </span>
             </div>
-        </div> -->
+        </div>
         <div class="grid grid-col-1 md:grid-cols-12 grap-2 px-5 py-5">
-            <div class="flex flex-col md:col-span-3 mx-3 px-2 py-2 bg-transparent rounded-s-sm rounded-r-sm shadow-lg border border-gray-700 pb-2 card-scroll transform-3d footer-doted-skeletone">
+            <div class="flex flex-col md:col-span-3 mx-3 px-2 py-2 bg-transparent rounded-s-sm rounded-r-sm shadow-lg border border-gray-100 pb-2 card-scroll transform-3d footer-doted-skeletone">
                 <span class="text-md text-left font-semibold text-indigo-200 dark:text-white dark:text-shadow-2xs shadow-sm uppercase ps-2 mb-2">Company Information</span>
                 <span class="text-indigo-100 dark:text-white dark:text-shadow-2xs text-left text-sm font-normal transition-opacity ps-2">Company Name</span>
                 <span class="text-indigo-100 dark:text-white dark:text-shadow-2xs text-left text-sm font-normal transition-opacity ps-2">
@@ -500,7 +507,7 @@
                     Linkedin : <span>..........</span>
                 </span>
             </div>
-            <div class="flex flex-col md:col-span-3 mx-3 px-2 py-2 bg-transparent rounded-s-sm rounded-r-sm shadow-lg border border-gray-600 pb-2 card-scroll transform-3d footer-doted-skeletone">
+            <div class="flex flex-col md:col-span-3 mx-3 px-2 py-2 bg-transparent rounded-s-sm rounded-r-sm shadow-lg border border-gray-100 pb-2 card-scroll transform-3d footer-doted-skeletone">
                 <span class="text-md text-left font-semibold text-indigo-200 dark:text-white dark:text-shadow-2xs shadow-sm uppercase ps-2 mb-2">Helpfull Links</span>
                 <a type="button" href="#" class="text-indigo-100 dark:text-white dark:text-shadow-2xs text-left text-sm font-normal hover:text-indigo-300 transition-opacity ps-2">
                     ➤ About-us
@@ -515,7 +522,7 @@
                     ➤ Testimonial
                 </a>
             </div>
-            <div class="flex flex-col md:col-span-3 mx-3 px-2 py-2 bg-transparent rounded-s-sm rounded-r-sm shadow-lg border border-gray-600 pb-2 card-scroll transform-3d footer-doted-skeletone">
+            <div class="flex flex-col md:col-span-3 mx-3 px-2 py-2 bg-transparent rounded-s-sm rounded-r-sm shadow-lg border border-gray-100 pb-2 card-scroll transform-3d footer-doted-skeletone">
                 <span class="text-md text-left font-semibold text-indigo-200 dark:text-white dark:text-shadow-2xs shadow-sm uppercase ps-2 mb-2">Bussiness Reference</span>
                 <a type="button" href="#" class="text-indigo-100 dark:text-white dark:text-shadow-2xs text-left text-sm font-normal hover:text-indigo-300 transition-opacity ps-2">
                     ➤ Releative another bussiness link-01
@@ -530,8 +537,8 @@
                     ➤ Releative another bussiness link-04
                 </a>
             </div>
-            <div class="flex flex-col md:col-span-3 mx-3 px-2 py-2 bg-transparent rounded-s-sm rounded-r-sm shadow-lg border border-gray-700 pb-2 card-scroll transform-3d footer-doted-skeletone">
-                <span class="text-md text-left font-semibold text-indigo-200 dark:text-white dark:text-shadow-2xs shadow-sm uppercase ps-2 mb-2">Social Media</span>
+            <div class="flex flex-col md:col-span-3 mx-3 px-2 py-2 bg-transparent rounded-s-sm rounded-r-sm shadow-lg border border-gray-100 pb-2 card-scroll transform-3d footer-doted-skeletone">
+                <span class="text-md text-left font-extrabold dark:text-gray-500 dark:text-shadow-2xs shadow-sm uppercase ps-2 mb-2">Social Media</span>
                 <div class="flex flex-row justify-evenly pt-5">
                     <span class="media_group transform-3d">
                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="40px" width="40px" version="1.1" id="Layer_1" viewBox="0 0 474.294 474.294" xml:space="preserve">
@@ -589,7 +596,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
     <script type="module">
-        import { customCursor } from "./design-module.js";
+        import { customCursor, hoverWeaveEffect } from "./design-module.js";
+
+        // Apply effect to all images with `.weave-img` class
+        hoverWeaveEffect('.weave-img', 25, 0.3);
 
         customCursor('.input_cursor', '.fake-caret');
 

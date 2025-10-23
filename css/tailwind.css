@@ -814,8 +814,3 @@ button.button-shadow{
     animation: textup 5s linear infinite;
     transform: var(--about-transform);
 }
-.contact {
-  opacity: 5;
-  background-color: #f2f3f8;
-  background: url('/public/logo/office-contract-desk.png') no-repeat center bottom;
-}
