@@ -83,6 +83,15 @@ button#searchBtn{
   --bg-white-200:linear-gradient(45deg, #fff, #fff);
   background-image: var(--bg-white-200);
   transition: all 0.3s ease-in-out; 
+  animation: load 6s infinite;
+  background-position: 100% 0;
+  background-size: 200% 100%;
+  width: 100%;
+}
+@keyframes load {
+  100% {
+    background-position: -100%;
+  }
 }
 .nav-bg{
   --bg-dark-200: linear-gradient(45deg, #1e1e1ed9, #1e1e1ed9);
@@ -657,8 +666,8 @@ button.button-shadow{
     justify-content: space-between;
     left:1;
     z-index: 2;
-    margin-top: -7px;
-    margin-left: -7px;
+    margin-top: -8px;
+    margin-left: -8px;
     height: 100%;
     width: 100%;
     border-radius: 1px;
@@ -813,4 +822,66 @@ button.button-shadow{
 .about-title{
     animation: textup 5s linear infinite;
     transform: var(--about-transform);
+}
+.text-bounce {
+  animation: bounce 1s infinite alternate;
+  position: relative;
+  top: 20px;
+}
+@keyframes bounce {
+  100%{
+    top: -6px;
+  }
+}
+button.btn-v200{
+  animation: btn_highlight 1s infinite;
+  background-image: linear-gradient(30deg,red 50%, transparent 5%, rgb(209, 2, 2) 2%,transparent, darkred 1%);
+}
+@keyframes btn_highlight {
+  0%{
+    background-image: linear-gradient(-2deg,red 50%, transparent 5%, rgb(209, 2, 2) 2%,transparent, darkred 1%);
+  }
+  20%{
+    background-image: linear-gradient(3deg,red 50%, transparent 5%, rgb(209, 2, 2) 2%,transparent, darkred 1%);
+  }
+  50%{
+    background-image: linear-gradient(-15deg,red 50%, transparent 5%, rgb(209, 2, 2) 2%,transparent, darkred 1%);
+  }
+  70%{
+    background-image: linear-gradient(-25deg,red 50%, transparent 5%, rgb(209, 2, 2) 2%,transparent, darkred 1%);
+  }
+  100%{
+    background-image: linear-gradient(-25deg,red 50%, transparent 5%, rgb(209, 2, 2) 2%,transparent, darkred 1%);
+  }
+}
+button.btn-v200:hover{
+  animation: none;
+  background-image: linear-gradient(90deg,red, rgb(209, 2, 2), darkred 100%);
+  opacity: 1;
+}
+button.btn-v400{
+  animation: btn_blue_highlight 1s infinite;
+  background-image: linear-gradient(30deg,oklch(62.3% 0.214 259.815) 50%, transparent 5%, oklch(58.5% 0.233 277.117) 2%,transparent, oklch(42.4% 0.199 265.638) 1%);
+}
+@keyframes btn_blue_highlight {
+  0%{
+    background-image: linear-gradient(-2deg,oklch(62.3% 0.214 259.815) 50%, transparent 5%, oklch(58.5% 0.233 277.117) 2%,transparent, oklch(42.4% 0.199 265.638) 1%);
+  }
+  20%{
+    background-image: linear-gradient(3deg,oklch(62.3% 0.214 259.815) 50%, transparent 5%, oklch(58.5% 0.233 277.117) 2%,transparent, oklch(42.4% 0.199 265.638) 1%);
+  }
+  50%{
+    background-image: linear-gradient(-15deg,oklch(62.3% 0.214 259.815) 50%, transparent 5%, oklch(58.5% 0.233 277.117) 2%,transparent, oklch(42.4% 0.199 265.638) 1%);
+  }
+  70%{
+    background-image: linear-gradient(-25deg,oklch(62.3% 0.214 259.815) 50%, transparent 5%, oklch(58.5% 0.233 277.117) 2%,transparent, oklch(42.4% 0.199 265.638) 1%);
+  }
+  100%{
+    background-image: linear-gradient(-25deg,oklch(62.3% 0.214 259.815) 50%, transparent 5%, oklch(58.5% 0.233 277.117) 2%,transparent, oklch(42.4% 0.199 265.638) 1%);
+  }
+}
+button.btn-v400:hover{
+  animation: none;
+  background-image: linear-gradient(90deg,oklch(58.5% 0.233 277.117), oklch(58.5% 0.233 277.117), oklch(42.4% 0.199 265.638) 100%);
+  opacity: 1;
 }
