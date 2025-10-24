@@ -1004,3 +1004,36 @@ blockquote span:nth-child(19){
       color: var(--font-color);
     }
   }
+.input-group {
+  position: relative;
+  width: 100%;
+}
+
+.input-group label {
+  z-index: 10;
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  padding: 0;
+  pointer-events: none;
+  transition: 0.3s ease-out;
+  color: rgb(131 131 131);
+  background-color: transparent;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.input-group input:focus ~ label,
+.input-group textarea:focus ~ label,
+.input-group input:not(:placeholder-shown) ~ label,
+.input-group textarea:not(:placeholder-shown) ~ label {
+  top: 0;
+  left: 8px;
+  font-size: 10px;
+  font-weight: 900;
+  color: #333;
+  background-color: rgb(255 255 255 / 85%);
+  padding: 0 3px;
+  word-spacing: 2px;
+}
