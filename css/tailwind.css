@@ -24,6 +24,20 @@
     --text-shadow:0 1px 0 #ccc, 0 2px 0 #ccc, 0 6px 0 transparent, 0 10px 10px rgb(0, 0,0,0.4);
     --paragraph-text:0 1px 0 #ccc, 0 6px 0 transparent, 0 9px 0 transparent, 0 10px 10px rgb(0, 0,0,0.4);
     --about-transform:translateY(100px);
+    --contract-head-shadow:0 1px 0 #ccc, 0 2px 0 #ccc, 0 3px 0 #ccc, 0 4px 0 #ccc, 0 5px 0 #ccc,
+        0 6px 0 #ccc,0 7px 0 #ccc,0 8px 0 #ccc, 0 9px 0 transparent,
+        0 10px 0 transparent, 0 11px 0 transparent, 0 12px 0 transparent, 0 13px 0 transparent, 
+        0 13px 0 transparent,0 14px 0 transparent,0 15px 0 transparent,0 10px 10px rgb(0, 0,0,0.4);
+    --contract-head-shadow-100:0 1px 0 #ccc, 0 2px 0 #ccc, 0 3px 0 #ccc, 0 4px 0 #ccc, 0 5px 0 #ccc,
+        0 6px 0 #ccc,0 7px 0 #ccc,0 8px 0 #ccc, 0 9px 0 transparent,
+        0 10px 0 transparent, 0 11px 0 transparent, 0 12px 0 transparent, 0 13px 0 transparent, 
+        0 13px 0 transparent,0 14px 0 transparent,0 15px 0 transparent,0 50px 25px rgb(0, 0,0,0.4);
+    --bounce-animation:smothbounce 1s infinite alternate;
+    --font:scaleX(1);
+    --font-transform:scale3d(1.05,1.05,1.05);
+    --font-color-0:oklch(58.5% 0.233 277.117);
+    --font-color-50:darkgray;
+    --font-color:oklch(42.4% 0.199 265.638);
 }
 body{
     color: #212529;
@@ -819,8 +833,24 @@ button.button-shadow{
         transition: var(--animation-transparent2);
     }
 }
+.about-subtitle{
+  animation: textup 4s ease-in-out infinite;
+  transform: var(--about-transform);
+}
+.about-head-text{
+  animation: textup 2s linear infinite;
+  transform: var(--about-transform);
+}
 .about-title{
     animation: textup 5s linear infinite;
+    transform: var(--about-transform);
+}
+.about-paragrahp{
+    animation: textup 20s linear infinite;
+    transform: var(--about-transform);
+}
+.about-discription{
+    animation: textup 20s linear infinite;
     transform: var(--about-transform);
 }
 .text-bounce {
@@ -885,3 +915,92 @@ button.btn-v400:hover{
   background-image: linear-gradient(90deg,oklch(58.5% 0.233 277.117), oklch(58.5% 0.233 277.117), oklch(42.4% 0.199 265.638) 100%);
   opacity: 1;
 }
+blockquote span{
+    position: relative;
+    top: -12px;
+    text-shadow: var(--contract-head-shadow);
+    animation: var(--bounce-animation);
+}
+@keyframes smothbounce{
+    100%{
+        top: 12px;
+        text-shadow: var(--contract-head-shadow-100);
+    }
+}
+blockquote span:nth-child(2){
+    animation-delay: 0.1s;
+}
+blockquote span:nth-child(3){
+    animation-delay: 0.2s;
+}
+blockquote span:nth-child(4){
+    animation-delay: 0.3s;
+}
+blockquote span:nth-child(5){
+    animation-delay: 0.4s;
+}
+blockquote span:nth-child(6){
+    animation-delay: 0.5s;
+}
+blockquote span:nth-child(7){
+    animation-delay: 0.6s;
+}
+blockquote span:nth-child(8){
+    animation-delay: 0.7s;
+}
+blockquote span:nth-child(9){
+    animation-delay: 0.8s;
+}
+blockquote p:nth-child(10){
+    animation-delay: 0.9s;
+}
+blockquote span:nth-child(11){
+    animation-delay: 0.8s;
+}
+blockquote span:nth-child(12){
+    animation-delay: 0.7s;
+}
+blockquote span:nth-child(13){
+    animation-delay: 0.6s;
+}
+blockquote span:nth-child(14){
+    animation-delay: 0.5s;
+}
+blockquote span:nth-child(15){
+    animation-delay: 0.4s;
+}
+blockquote span:nth-child(16){
+    animation-delay: 0.3s;
+}
+blockquote span:nth-child(17){
+    animation-delay: 0.5s;
+}
+blockquote span:nth-child(18){
+    animation-delay: 0.4s;
+}
+blockquote span:nth-child(19){
+    animation-delay: 0.3s;
+}
+.sliding_text{
+    /* text-shadow: var(--footer-top-head-word); */
+    opacity: 1;
+    align-items: center;
+    animation: footer_font 6s infinite;
+}
+@keyframes footer_font{
+    0% {
+      -webkit-transform: var(--font);
+      transform: var(--font);
+      color: var(--font-color-0);
+    }
+    50% {
+      -webkit-transform: var(--font-transform);
+      transform: var(--font-transform);
+      color: var(--font-color-50);
+    }
+    100% {
+      -webkit-transform:var(--font);
+      transform: var(--font);
+      color: var(--font-color);
+    }
+  }

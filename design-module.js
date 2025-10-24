@@ -48,7 +48,6 @@ export function customCursor(inputClass, cursorClass) {
         });
     });
 }
-
 // hoverWeave.js
 export function hoverWeaveEffect(selector, intensity = 20, speed = 0.2) {
   const elements = document.querySelectorAll(selector);
@@ -81,4 +80,71 @@ export function hoverWeaveEffect(selector, intensity = 20, speed = 0.2) {
       el.style.boxShadow = '0 0 20px rgba(0,0,0,0.1)';
     });
   });
+}
+// slider image
+export function initImageSlider(imageSlider) {
+  let currentState = 0;
+  let timer = null;
+
+  // Update image and text content
+  function updateSlide() {
+    const imageBody = document.querySelector(".image-body");
+    const title = document.querySelector(".text-part h1");
+    const body = document.querySelector(".text-part p");
+
+    if (!imageBody) return;
+
+    const current = imageSlider[currentState];
+
+    imageBody.style.backgroundImage = `url(${current.url})`;
+    imageBody.style.backgroundPosition = "center";
+    imageBody.style.backgroundSize = "cover";
+    imageBody.style.height = "100%";
+    imageBody.style.borderRadius = "5px";
+
+    title.textContent = current.title;
+    body.textContent = current.body;
+
+    // Highlight active bullet
+    const bullets = document.querySelectorAll(".carousel-button span");
+    bullets.forEach((b, i) => {
+      b.classList.toggle("active", i === currentState);
+    });
+  }
+
+  // Go to specific slide
+  function goToNext(index) {
+    currentState = index;
+    updateSlide();
+    resetAutoSlide();
+  }
+
+  // Automatic slide rotation
+  function startAutoSlide() {
+    timer = setInterval(() => {
+      currentState = (currentState + 1) % imageSlider.length;
+      updateSlide();
+    }, 5000);
+  }
+
+  // Reset timer when user clicks manually
+  function resetAutoSlide() {
+    clearInterval(timer);
+    startAutoSlide();
+  }
+
+  // Initialize slider
+  function init() {
+    const buttonContainer = document.querySelector(".carousel-button");
+    imageSlider.forEach((_, i) => {
+      const span = document.createElement("span");
+      span.addEventListener("click", () => goToNext(i));
+      buttonContainer.appendChild(span);
+    });
+
+    updateSlide();
+    startAutoSlide();
+  }
+
+  document.addEventListener("DOMContentLoaded", init);
 }
